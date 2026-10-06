@@ -1,0 +1,55 @@
+# Dados brutos do dataset (mantenha uma cópia local)
+/data/raw/*
+!/data/raw/.gitkeep
+
+# Dados processados/gerados
+/data/processed/*
+!/data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+ENV/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Variáveis de ambiente e credenciais locais
+.env
+.env.*
+!.env.example
+.pgpass
+.pg_service.conf
+
+# PostgreSQL e bancos locais
+*.dump
+*.backup
+*.sqlite
+*.sqlite3
+*.db
+/pgdata/
+/postgres-data/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
