@@ -1,97 +1,104 @@
-# Olist Brazilian E-Commerce — Projeto de Portfólio em SQL
+# Olist Brazilian E-Commerce | SQL & PostgreSQL
 
-Projeto de portfólio para construir, do zero, um banco de dados PostgreSQL a partir do **Brazilian E-Commerce Public Dataset by Olist** e praticar SQL com dados de um cenário real de comércio eletrônico. Após a etapa de modelagem e análise em SQL, o projeto pretende evoluir para análises complementares em Python.
+Projeto de portfólio voltado à **Análise de Dados com SQL**, utilizando o [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). O objetivo é estruturar uma base relacional no PostgreSQL, preparar os dados para análises e, nas próximas etapas, explorar indicadores de negócio e integrar Python e Power BI.
 
-> **Status:** em desenvolvimento. O projeto cria um banco PostgreSQL individual para o dataset Olist e prevê uma tabela correspondente a cada arquivo CSV. A estrutura inicial do banco, os schemas `raw` e `analytics`, a tabela RAW de clientes e um primeiro script de profiling já estão no repositório. As tabelas correspondentes aos demais CSVs e a carga completa ainda serão desenvolvidas.
+**Status:** em desenvolvimento — ingestão e validação inicial da camada `raw` concluídas; preparação da camada `analytics` é a próxima etapa.
 
-## Objetivos
+## Tecnologias e competências
 
-- Criar um banco PostgreSQL individual, dedicado aos dados do projeto Olist.
-- Organizar os dados em schemas para separar a camada de origem (`raw`) da camada de análise (`analytics`).
-- Criar uma tabela correspondente a cada CSV do dataset e carregar os dados na camada RAW, preservando a estrutura de origem.
-- Validar qualidade, consistência e relacionamentos dos dados com SQL.
-- Desenvolver consultas e análises de negócio em SQL.
-- Em uma etapa futura, ampliar o projeto com análise de dados em Python.
+- **PostgreSQL 16 e SQL:** criação de banco de dados, schemas e tabelas; consultas de validação e exploração.
+- **DBeaver:** conexão ao banco, execução de scripts e importação de arquivos CSV.
+- **Docker e servidor Linux:** utilização de instância PostgreSQL em ambiente próprio de estudos.
+- **Git e GitHub:** versionamento de scripts SQL e documentação técnica.
+- **Qualidade de dados:** contagem de registros, investigação inicial de valores ausentes e inspeção de identificadores.
 
 ## Dataset
 
-O projeto utiliza o dataset público da Olist, que reúne dados de pedidos, clientes, itens, pagamentos, avaliações, produtos, vendedores, geolocalização e tradução de categorias.
+A base pública da Olist reúne informações de pedidos de e-commerce brasileiro, clientes, itens, pagamentos, avaliações, produtos, vendedores, geolocalização e categorias de produtos.
 
-Fonte: [Brazilian E-Commerce Public Dataset by Olist — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+**Fonte:** [Olist — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
-Os CSVs locais ficam em `data/raw/`. Por serem dados de origem e potencialmente grandes, esse diretório está excluído do Git. Portanto, os arquivos devem ser obtidos separadamente e colocados nessa pasta para executar uma futura carga. O repositório mantém um `.gitkeep` para preservar a estrutura do diretório.
+Os nove arquivos CSV são mantidos localmente em `data/raw/` e não são versionados neste repositório.
 
-Cada CSV será carregado em sua própria tabela no banco `olist_ecommerce`, mantendo a correspondência entre os arquivos de origem e as tabelas da camada `raw`. A criação dessas tabelas está sendo feita gradualmente; até o momento, `raw.customers` é a tabela definida no projeto.
+## Arquitetura de dados
 
-Arquivos esperados:
+```text
+CSVs Olist
+    |
+    v
+PostgreSQL: olist_ecommerce
+    |
+    +-- raw        -> dados de origem preservados, colunas inicialmente em TEXT
+    |
+    +-- analytics  -> conversão de tipos, tratamento e estruturas para análise (planejado)
+```
 
-| Arquivo | Conteúdo |
-| --- | --- |
-| `olist_customers_dataset.csv` | Clientes e localização informada |
-| `olist_orders_dataset.csv` | Pedidos e datas/status |
-| `olist_order_items_dataset.csv` | Itens, produtos, vendedores, preços e frete |
-| `olist_order_payments_dataset.csv` | Pagamentos e parcelas |
-| `olist_order_reviews_dataset.csv` | Avaliações e comentários |
-| `olist_products_dataset.csv` | Produtos, categorias e dimensões |
-| `olist_sellers_dataset.csv` | Vendedores e localização |
-| `olist_geolocation_dataset.csv` | Coordenadas geográficas por CEP |
-| `product_category_name_translation.csv` | Tradução dos nomes de categoria |
+A camada `raw` preserva os dados importados sem impor chaves ou transformações. A preparação será realizada em tabelas separadas no schema `analytics`, mantendo a origem disponível para conferência e reprocessamento.
 
-## Ambiente
+## Etapas realizadas
 
-O banco de dados é desenvolvido em PostgreSQL e executado em um servidor doméstico, em um contêiner Docker. O acesso ao servidor é feito por meio de um túnel.
+1. Criação do banco dedicado `olist_ecommerce` e dos schemas `raw` e `analytics`.
+2. Definição das nove tabelas de origem, com atributos correspondentes aos CSVs e tipo `TEXT`.
+3. Importação dos nove arquivos CSV para o PostgreSQL por meio do DBeaver.
+4. Validação das cargas com `COUNT(*)` e `UNION ALL`, incluindo identificação da tabela de origem e ordenação com `ORDER BY`.
+5. Exploração inicial com `SELECT`, `WHERE`, `LIMIT` e verificações de valores ausentes usando `IS NULL`, `TRIM()` e `IN`.
+6. Registro dos scripts SQL e da documentação no repositório.
 
-## O que já foi construído
+### Resultado das cargas
 
-1. `sql/01_setup/01_create_database.sql` cria o banco individual `olist_ecommerce`, dedicado ao projeto.
-2. `sql/01_setup/02_create_schemas.sql` cria os schemas:
-   - `raw`: destinado aos dados de origem;
-   - `analytics`: reservado para transformações e estruturas analíticas futuras.
-3. `sql/01_setup/03_create_raw_tables.sql` cria a tabela `raw.customers`, correspondente ao arquivo `olist_customers_dataset.csv`, com as colunas armazenadas inicialmente como `TEXT`. A tabela não define PKs ou FKs e não aplica limpeza, mantendo-se próxima à fonte. As tabelas correspondentes aos outros CSVs ainda serão acrescentadas.
-4. `sql/02_profiling/01_customers_profiling.sql` contém verificações de nulos, valores vazios, representações textuais de ausências e registros duplicados para `raw.customers`.
+| Tabela (`raw`) | Registros |
+|---|---:|
+| `customers` | 99.441 |
+| `orders` | 99.441 |
+| `order_items` | 112.650 |
+| `order_payments` | 103.886 |
+| `order_reviews` | 99.224 |
+| `products` | 32.951 |
+| `sellers` | 3.095 |
+| `geolocation` | 1.000.163 |
+| `product_category_name_translation` | 71 |
+| **Total** | **1.550.922** |
 
-O script de profiling registra como observações preliminares que `customer_id` possui 99.441 valores distintos em 99.441 registros e que os 96.096 valores distintos de `customer_unique_id` podem se repetir entre registros sem que isso signifique duplicidade completa. O script também aponta que não encontrou registros completamente duplicados em `raw.customers`. A relação com pedidos ainda precisa ser validada.
+As contagens foram conferidas após a importação. **Essa validação confirma o volume de linhas, não a integridade completa dos dados.** O total representa a soma dos registros de todas as tabelas, e não pedidos únicos.
+
+### Primeiras verificações de qualidade
+
+- Em `raw.customers`, foram observados **99.441** registros, **99.441** identificadores `customer_id` distintos e **96.096** identificadores `customer_unique_id` distintos; não foram encontradas linhas inteiramente duplicadas nas verificações iniciais.
+- Em `raw.orders`, a verificação de `order_delivered_customer_date` com `IS NULL` retornou **0** registros; ao considerar também strings vazias, espaços e representações textuais de ausência, foram identificados **2.965** registros (**aproximadamente 2,98%**). A interpretação desses casos ainda será aprofundada.
 
 ## Estrutura do repositório
 
 ```text
 .
 ├── data/
-│   ├── raw/                # CSVs originais (não versionados)
-│   └── processed/          # espaço reservado para dados derivados
-├── docs/                   # documentação futura
-├── images/                 # imagens e diagramas futuros
+│   ├── raw/                  # CSVs originais (não versionados)
+│   └── processed/            # reservado para dados derivados
+├── docs/                     # documentação complementar
+├── images/                   # diagramas e imagens
 ├── sql/
-│   ├── 01_setup/           # criação inicial do banco, schemas e tabelas
-│   └── 02_profiling/       # consultas de profiling e qualidade
+│   ├── 01_setup/
+│   │   ├── 01_create_database.sql
+│   │   ├── 02_create_schemas.sql
+│   │   └── 03_create_raw_tables.sql
+│   └── 02_profiling/         # validações e exploração inicial
 ├── .gitignore
 └── README.md
 ```
 
-## Execução atual
+## Como reproduzir a etapa de ingestão
 
-Os scripts SQL devem ser executados na ordem abaixo:
+1. Obtenha os CSVs no [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e coloque-os em `data/raw/`.
+2. Execute `sql/01_setup/01_create_database.sql` conectado a um banco administrativo, como `postgres`.
+3. Conecte-se ao banco `olist_ecommerce` e execute, na ordem, `02_create_schemas.sql` e `03_create_raw_tables.sql`.
+4. Importe cada CSV para a tabela correspondente do schema `raw` utilizando o DBeaver, conferindo cabeçalhos, codificação UTF-8, delimitador e mapeamento de colunas.
+5. Execute as consultas de validação em `sql/02_profiling/` e confira as contagens apresentadas acima.
 
-1. Conecte-se ao servidor PostgreSQL com um usuário autorizado e execute `sql/01_setup/01_create_database.sql`. A conexão inicial deve estar em outro banco, como `postgres`, pois o banco `olist_ecommerce` ainda será criado.
-2. Conecte-se ao banco `olist_ecommerce`.
-3. Execute `sql/01_setup/02_create_schemas.sql`.
-4. Execute `sql/01_setup/03_create_raw_tables.sql`.
-5. Disponibilize os CSVs localmente e carregue `olist_customers_dataset.csv` em `raw.customers` usando a ferramenta de sua preferência.
-6. Execute `sql/02_profiling/01_customers_profiling.sql` para inspecionar os dados carregados.
-
-> A carga dos CSVs ainda não está automatizada neste repositório. O script de profiling depende de `raw.customers` já conter dados.
+**Nota:** a carga dos CSVs foi realizada manualmente no DBeaver; a automação da ingestão ainda não foi implementada. Os arquivos CSV e as credenciais de acesso não são incluídos no Git.
 
 ## Próximas etapas
 
-- Criar as tabelas RAW restantes, uma para cada CSV do dataset.
-- Definir e documentar uma estratégia reproduzível de carga dos arquivos.
-- Conferir contagens, tipos, valores ausentes e consistência após a carga.
-- Investigar chaves e relacionamentos entre as entidades.
-- Desenvolver a camada `analytics` e consultas para responder perguntas de negócio.
-- Acrescentar análises em Python em uma etapa posterior.
-
-## Boas práticas de segurança e versionamento
-
-- Não versionar o conteúdo de `data/raw/` nem credenciais ou arquivos locais de conexão.
-- Manter apenas exemplos sem segredos em arquivos de configuração compartilhados.
-- Usar um usuário PostgreSQL com permissões adequadas ao projeto, sem expor credenciais nos scripts.
+- Construir tabelas no schema `analytics` com tipos adequados (`TIMESTAMP`, numéricos e texto), preservando `raw`.
+- Tratar valores ausentes e inconsistências, avaliar duplicidades e validar relacionamentos.
+- Desenvolver consultas analíticas com `JOIN`, agregações, CTEs e funções de janela.
+- Investigar indicadores de vendas, clientes, produtos, pagamentos e entregas.
+- Evoluir o projeto com visualizações em Power BI e análises em Python.
