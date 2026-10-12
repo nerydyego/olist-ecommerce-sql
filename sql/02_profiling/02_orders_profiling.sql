@@ -11,3 +11,19 @@ select count(*) as total_nulos_entrega from raw.orders where order_delivered_cus
 select count(*) as total_vazios_entrega from raw.orders where order_delivered_customer_date is null 
 or Trim(order_delivered_customer_date) = '' or order_delivered_customer_date in ('NULL', 'null')
 or ;
+
+/*
+ * VALIDAÇÃO DE IDENTIFICADORES - RAW.CUSTOMERS
+ *
+ * Objetivo:
+ * Verificar a existência de customer_id nulos,
+ * vazios ou preenchidos apenas com espaços.
+ *
+ * Finalidade:
+ * Avaliar se customer_id pode ser utilizado
+ * como chave primária em analytics.customers.
+ */
+
+select count(*) as customer_id_ausentes
+	from raw.customers 	
+	where customer_id is null or trim(customer_id) = '' or customer_id in ('NULL', 'null');
