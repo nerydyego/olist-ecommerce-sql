@@ -43,3 +43,5 @@ SELECT
     CAST(NULLIF(TRIM(order_estimated_delivery_date), '') AS TIMESTAMP) AS order_estimated_delivery_date
 
 FROM raw.orders;
+
+	
