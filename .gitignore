@@ -55,5 +55,6 @@ desktop.ini
 .idea/
 
 # DOCS - templates, planos e documentação
-/docs/PLANO_PROJETO.md
 sql/sql_templates.md
+/docs/PLANO_PROJETO.md
+/docs/*

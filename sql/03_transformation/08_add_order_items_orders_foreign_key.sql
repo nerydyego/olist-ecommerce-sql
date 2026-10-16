@@ -20,6 +20,7 @@ ALTER TABLE analytics.order_items
 ADD CONSTRAINT fk_order_items_orders
 FOREIGN KEY (order_id)
 REFERENCES analytics.orders(order_id);
+gitcd\
 
 SELECT 
 	constraint_name,

@@ -28,4 +28,3 @@ select constraint_name, constraint_type
 	from information_schema.table_constraints
 	where table_schema = 'analytics'
 		and table_name = 'orders';
-	

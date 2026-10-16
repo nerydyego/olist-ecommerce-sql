@@ -1,74 +1,101 @@
-# Olist Brazilian E-Commerce | SQL & PostgreSQL
+# Olist Brazilian E-Commerce \| SQL & PostgreSQL
 
-Projeto de portfólio voltado à **Análise de Dados com SQL**, utilizando o [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). O objetivo é estruturar uma base relacional no PostgreSQL, preparar os dados para análises e, nas próximas etapas, explorar indicadores de negócio e integrar Python e Power BI.
+Projeto de portfólio em **SQL, modelagem relacional e preparação de
+dados**, utilizando o [Brazilian E-Commerce Public Dataset by
+Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). A
+base foi implantada em PostgreSQL, com separação entre dados originais e
+dados tratados para futuras análises de negócio.
 
-**Status:** em desenvolvimento — ingestão e validação inicial da camada `raw` concluídas; preparação da camada `analytics` é a próxima etapa.
+**Status:** ingestão, transformação e relacionamentos das nove tabelas
+concluídos. Projeto em desenvolvimento: qualidade de dados e análises
+exploratórias são as próximas etapas.
 
 ## Tecnologias e competências
 
-- **PostgreSQL 16 e SQL:** criação de banco de dados, schemas e tabelas; consultas de validação e exploração.
-- **DBeaver:** conexão ao banco, execução de scripts e importação de arquivos CSV.
-- **Docker e servidor Linux:** utilização de instância PostgreSQL em ambiente próprio de estudos.
-- **Git e GitHub:** versionamento de scripts SQL e documentação técnica.
-- **Qualidade de dados:** contagem de registros, investigação inicial de valores ausentes e inspeção de identificadores.
+-   **PostgreSQL 16 / SQL:** criação de banco e schemas, conversão de
+    tipos, `JOIN`, agregações, chaves primárias e estrangeiras.
+-   **DBeaver:** importação de CSVs, execução e validação de scripts.
+-   **Docker / Ubuntu Server:** PostgreSQL em servidor próprio, acessado
+    remotamente por túnel SSH.
+-   **Qualidade de dados:** verificação de contagens, tratamento de
+    valores ausentes, deduplicação e integridade referencial.
+-   **Git / GitHub:** versionamento dos scripts e documentação.
 
-## Dataset
+## Dataset e arquitetura
 
-A base pública da Olist reúne informações de pedidos de e-commerce brasileiro, clientes, itens, pagamentos, avaliações, produtos, vendedores, geolocalização e categorias de produtos.
+**Fonte:** [Olist ---
+Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+São nove arquivos CSV sobre pedidos, clientes, itens, pagamentos,
+avaliações, produtos, vendedores, geolocalização e categorias.
 
-**Fonte:** [Olist — Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
-
-Os nove arquivos CSV são mantidos localmente em `data/raw/` e não são versionados neste repositório.
-
-## Arquitetura de dados
-
-```text
+``` text
 CSVs Olist
     |
     v
 PostgreSQL: olist_ecommerce
     |
-    +-- raw        -> dados de origem preservados, colunas inicialmente em TEXT
-    |
-    +-- analytics  -> conversão de tipos, tratamento e estruturas para análise (planejado)
+    +-- raw        -> dados originais preservados (colunas importadas como TEXT)
+    +-- analytics  -> tipos adequados, tratamentos e integridade relacional
 ```
 
-A camada `raw` preserva os dados importados sem impor chaves ou transformações. A preparação será realizada em tabelas separadas no schema `analytics`, mantendo a origem disponível para conferência e reprocessamento.
+A camada `raw` permite auditoria e reprocessamento; `analytics`
+concentra as transformações, sem alterar os arquivos de origem.
 
 ## Etapas realizadas
 
-1. Criação do banco dedicado `olist_ecommerce` e dos schemas `raw` e `analytics`.
-2. Definição das nove tabelas de origem, com atributos correspondentes aos CSVs e tipo `TEXT`.
-3. Importação dos nove arquivos CSV para o PostgreSQL por meio do DBeaver.
-4. Validação das cargas com `COUNT(*)` e `UNION ALL`, incluindo identificação da tabela de origem e ordenação com `ORDER BY`.
-5. Exploração inicial com `SELECT`, `WHERE`, `LIMIT` e verificações de valores ausentes usando `IS NULL`, `TRIM()` e `IN`.
-6. Registro dos scripts SQL e da documentação no repositório.
+1.  Criação do banco `olist_ecommerce`, dos schemas `raw` e `analytics`
+    e importação dos nove CSVs via DBeaver.
+2.  Validação das cargas, inspeção de identificadores, valores ausentes
+    e duplicidades.
+3.  Criação das **nove tabelas** em `analytics`, com conversão de tipos
+    (`INTEGER`, `NUMERIC`, `TIMESTAMP` e texto, conforme o atributo).
+4.  Definição de **chaves primárias simples e compostas** e **chaves
+    estrangeiras** para os relacionamentos entre as tabelas pertinentes.
+5.  Deduplicação de `geolocation`: **1.000.163** linhas na origem e
+    **738.332** registros distintos em `analytics` (**261.831**
+    ocorrências duplicadas removidas); criação de identificador
+    `BIGINT GENERATED ALWAYS AS IDENTITY`.
+6.  Normalização de **610** categorias vazias de produtos para `NULL`
+    exclusivamente em `analytics`.
+7.  Complementação da referência de categorias com **duas categorias
+    existentes nos produtos**, mantendo a tradução em inglês como
+    `NULL`, sem inventar traduções.
+8.  Validação de **zero produtos com categoria não nula sem
+    correspondência** e criação da chave estrangeira entre produtos e
+    categorias.
 
-### Resultado das cargas
+### Volumes da ingestão
 
-| Tabela (`raw`) | Registros |
-|---|---:|
-| `customers` | 99.441 |
-| `orders` | 99.441 |
-| `order_items` | 112.650 |
-| `order_payments` | 103.886 |
-| `order_reviews` | 99.224 |
-| `products` | 32.951 |
-| `sellers` | 3.095 |
-| `geolocation` | 1.000.163 |
-| `product_category_name_translation` | 71 |
-| **Total** | **1.550.922** |
+  Tabela (`raw`)                              Registros
+  ------------------------------------- ---------------
+  `customers`                                    99.441
+  `orders`                                       99.441
+  `order_items`                                 112.650
+  `order_payments`                              103.886
+  `order_reviews`                                99.224
+  `products`                                     32.951
+  `sellers`                                       3.095
+  `geolocation`                               1.000.163
+  `product_category_name_translation`                71
+  **Total**                               **1.550.922**
 
-As contagens foram conferidas após a importação. **Essa validação confirma o volume de linhas, não a integridade completa dos dados.** O total representa a soma dos registros de todas as tabelas, e não pedidos únicos.
+*O total é a soma de linhas das tabelas de origem, não a quantidade de
+pedidos únicos. A camada `analytics` apresenta volumes diferentes nas
+tabelas tratadas.*
 
-### Primeiras verificações de qualidade
+### Indicadores de validação
 
-- Em `raw.customers`, foram observados **99.441** registros, **99.441** identificadores `customer_id` distintos e **96.096** identificadores `customer_unique_id` distintos; não foram encontradas linhas inteiramente duplicadas nas verificações iniciais.
-- Em `raw.orders`, a verificação de `order_delivered_customer_date` com `IS NULL` retornou **0** registros; ao considerar também strings vazias, espaços e representações textuais de ausência, foram identificados **2.965** registros (**aproximadamente 2,98%**). A interpretação desses casos ainda será aprofundada.
+  Indicador                                               Resultado
+  ----------------------------------------------------- -----------
+  Produtos preservados em `analytics.products`               32.951
+  Categorias de produtos normalizadas para `NULL`               610
+  Categorias na referência após complementação                   73
+  Produtos com categoria não nula sem correspondência             0
+  Registros distintos em `analytics.geolocation`            738.332
 
 ## Estrutura do repositório
 
-```text
+``` text
 .
 ├── data/
 │   ├── raw/                  # CSVs originais (não versionados)
@@ -76,29 +103,33 @@ As contagens foram conferidas após a importação. **Essa validação confirma 
 ├── docs/                     # documentação complementar
 ├── images/                   # diagramas e imagens
 ├── sql/
-│   ├── 01_setup/
-│   │   ├── 01_create_database.sql
-│   │   ├── 02_create_schemas.sql
-│   │   └── 03_create_raw_tables.sql
-│   └── 02_profiling/         # validações e exploração inicial
+│   ├── 01_setup/             # banco, schemas e tabelas raw
+│   ├── 02_profiling/         # validações iniciais
+│   └── 03_transformation/    # tabelas analytics, tratamento e restrições
 ├── .gitignore
 └── README.md
 ```
 
-## Como reproduzir a etapa de ingestão
+## Como reproduzir
 
-1. Obtenha os CSVs no [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e coloque-os em `data/raw/`.
-2. Execute `sql/01_setup/01_create_database.sql` conectado a um banco administrativo, como `postgres`.
-3. Conecte-se ao banco `olist_ecommerce` e execute, na ordem, `02_create_schemas.sql` e `03_create_raw_tables.sql`.
-4. Importe cada CSV para a tabela correspondente do schema `raw` utilizando o DBeaver, conferindo cabeçalhos, codificação UTF-8, delimitador e mapeamento de colunas.
-5. Execute as consultas de validação em `sql/02_profiling/` e confira as contagens apresentadas acima.
+1.  Baixe os CSVs do
+    [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+    e coloque-os em `data/raw/`.
+2.  Execute os scripts de `sql/01_setup/` para criar banco, schemas e
+    tabelas de origem.
+3.  Importe os CSVs para `raw` utilizando o DBeaver e valide as
+    contagens com `sql/02_profiling/`.
+4.  Execute os scripts de `sql/03_transformation/` **em ordem
+    numérica**, respeitando dependências entre tabelas, cargas,
+    tratamentos e restrições.
 
-**Nota:** a carga dos CSVs foi realizada manualmente no DBeaver; a automação da ingestão ainda não foi implementada. Os arquivos CSV e as credenciais de acesso não são incluídos no Git.
+**Nota:** a ingestão foi manual via DBeaver; sua automação ainda não foi
+implementada. CSVs e credenciais não são versionados.
 
 ## Próximas etapas
 
-- Construir tabelas no schema `analytics` com tipos adequados (`TIMESTAMP`, numéricos e texto), preservando `raw`.
-- Tratar valores ausentes e inconsistências, avaliar duplicidades e validar relacionamentos.
-- Desenvolver consultas analíticas com `JOIN`, agregações, CTEs e funções de janela.
-- Investigar indicadores de vendas, clientes, produtos, pagamentos e entregas.
-- Evoluir o projeto com visualizações em Power BI e análises em Python.
+-   Aprofundar verificações de qualidade e documentar regras de negócio.
+-   Desenvolver consultas analíticas com `JOIN`, agregações, CTEs e
+    funções de janela.
+-   Analisar vendas, clientes, produtos, pagamentos e entregas.
+-   Expandir o projeto com Python e dashboards em Power BI.
