@@ -1,135 +1,89 @@
-# Olist Brazilian E-Commerce \| SQL & PostgreSQL
+# Olist E-Commerce | SQL, Analytics e Ciência de Dados
 
-Projeto de portfólio em **SQL, modelagem relacional e preparação de
-dados**, utilizando o [Brazilian E-Commerce Public Dataset by
-Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). A
-base foi implantada em PostgreSQL, com separação entre dados originais e
-dados tratados para futuras análises de negócio.
+Projeto de portfólio de **engenharia, análise e ciência de dados** com o [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). O objetivo é transformar dados transacionais em indicadores de negócio, evoluindo de **PostgreSQL e SQL** para **Python, Power BI e Machine Learning**.
 
-**Status:** ingestão, transformação e relacionamentos das nove tabelas
-concluídos. Projeto em desenvolvimento: qualidade de dados e análises
-exploratórias são as próximas etapas.
+**Status:** preparação do banco e auditoria de qualidade concluídas no escopo definido. **Fase atual: análise exploratória com SQL.**
 
-## Tecnologias e competências
+## Tecnologias
 
--   **PostgreSQL 16 / SQL:** criação de banco e schemas, conversão de
-    tipos, `JOIN`, agregações, chaves primárias e estrangeiras.
--   **DBeaver:** importação de CSVs, execução e validação de scripts.
--   **Docker / Ubuntu Server:** PostgreSQL em servidor próprio, acessado
-    remotamente por túnel SSH.
--   **Qualidade de dados:** verificação de contagens, tratamento de
-    valores ausentes, deduplicação e integridade referencial.
--   **Git / GitHub:** versionamento dos scripts e documentação.
+- **Utilizadas:** PostgreSQL 16, SQL, DBeaver, Docker, Ubuntu Server, Git e GitHub.
+- **Planejadas para as próximas fases:** Python (pandas e bibliotecas de ML) e Power BI.
 
-## Dataset e arquitetura
+## Arquitetura de dados
 
-**Fonte:** [Olist ---
-Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
-São nove arquivos CSV sobre pedidos, clientes, itens, pagamentos,
-avaliações, produtos, vendedores, geolocalização e categorias.
-
-``` text
-CSVs Olist
-    |
-    v
+```text
+9 arquivos CSV (Olist)
+         |
+         v
 PostgreSQL: olist_ecommerce
-    |
-    +-- raw        -> dados originais preservados (colunas importadas como TEXT)
-    +-- analytics  -> tipos adequados, tratamentos e integridade relacional
+    |-- raw        Dados originais preservados (TEXT)
+    `-- analytics  Tipagem, transformações e relacionamentos
+         |
+         v
+   Análise exploratória SQL
+         |
+         +--> Python / análises e validações
+         +--> Power BI / dashboard
+         `--> Machine Learning / experimento
 ```
 
-A camada `raw` permite auditoria e reprocessamento; `analytics`
-concentra as transformações, sem alterar os arquivos de origem.
+A ingestão inicial foi realizada via DBeaver. O banco é executado em servidor próprio com Docker, com acesso remoto por túnel SSH. Os CSVs originais e as credenciais não são versionados.
 
-## Etapas realizadas
+## Resultados alcançados
 
-1.  Criação do banco `olist_ecommerce`, dos schemas `raw` e `analytics`
-    e importação dos nove CSVs via DBeaver.
-2.  Validação das cargas, inspeção de identificadores, valores ausentes
-    e duplicidades.
-3.  Criação das **nove tabelas** em `analytics`, com conversão de tipos
-    (`INTEGER`, `NUMERIC`, `TIMESTAMP` e texto, conforme o atributo).
-4.  Definição de **chaves primárias simples e compostas** e **chaves
-    estrangeiras** para os relacionamentos entre as tabelas pertinentes.
-5.  Deduplicação de `geolocation`: **1.000.163** linhas na origem e
-    **738.332** registros distintos em `analytics` (**261.831**
-    ocorrências duplicadas removidas); criação de identificador
-    `BIGINT GENERATED ALWAYS AS IDENTITY`.
-6.  Normalização de **610** categorias vazias de produtos para `NULL`
-    exclusivamente em `analytics`.
-7.  Complementação da referência de categorias com **duas categorias
-    existentes nos produtos**, mantendo a tradução em inglês como
-    `NULL`, sem inventar traduções.
-8.  Validação de **zero produtos com categoria não nula sem
-    correspondência** e criação da chave estrangeira entre produtos e
-    categorias.
+- **9 tabelas** carregadas na camada `raw` (**1.550.922 linhas somadas**, não pedidos únicos) e transformadas na camada `analytics`.
+- Tipos adequados, chaves primárias e relacionamentos implementados nas tabelas analíticas.
+- **261.831 ocorrências excedentes** removidas de `geolocation` com deduplicação por combinação de cinco atributos; **738.332 registros** na camada analítica.
+- **610 categorias vazias** em `products` normalizadas para `NULL`.
+- **2 categorias** acrescentadas à referência analítica para preservar o relacionamento com produtos, com tradução não disponível mantida como `NULL`.
+- Auditoria de **reconciliação e completude das 9 tabelas** documentada. Foram identificadas ausências em datas operacionais de pedidos e strings vazias em comentários de avaliações, sem correções arbitrárias.
 
-### Volumes da ingestão
+> **Escopo da auditoria:** as verificações realizadas não equivalem a uma certificação completa de unicidade, consistência de negócio ou integridade de todos os atributos. Novas investigações ocorrerão apenas quando relevantes para os indicadores.
 
-  Tabela (`raw`)                              Registros
-  ------------------------------------- ---------------
-  `customers`                                    99.441
-  `orders`                                       99.441
-  `order_items`                                 112.650
-  `order_payments`                              103.886
-  `order_reviews`                                99.224
-  `products`                                     32.951
-  `sellers`                                       3.095
-  `geolocation`                               1.000.163
-  `product_category_name_translation`                71
-  **Total**                               **1.550.922**
+## Roadmap e entregáveis
 
-*O total é a soma de linhas das tabelas de origem, não a quantidade de
-pedidos únicos. A camada `analytics` apresenta volumes diferentes nas
-tabelas tratadas.*
+| Fase | Entrega | Situação |
+|---|---|---|
+| 1. Banco e transformação | PostgreSQL, schemas, carga e modelagem relacional | Concluída |
+| 2. Qualidade dos dados | Reconciliação RAW × Analytics e completude | Concluída no escopo definido |
+| 3. EDA com SQL | **20 perguntas de negócio**, KPIs e insights documentados | **Em andamento — próxima execução** |
+| 4. Python | Reproduzir e validar análises selecionadas | Planejada |
+| 5. Power BI | Dashboard executivo com métricas consistentes | Planejada |
+| 6. Machine Learning | Problema preditivo, avaliação e limitações | Planejada |
 
-### Indicadores de validação
+A EDA tem escopo fechado: pedidos, receita, produtos, clientes, vendedores, pagamentos, logística e avaliações. Os critérios de conclusão estão no [roadmap de EDA SQL](ROADMAP_EDA_SQL.md).
 
-  Indicador                                               Resultado
-  ----------------------------------------------------- -----------
-  Produtos preservados em `analytics.products`               32.951
-  Categorias de produtos normalizadas para `NULL`               610
-  Categorias na referência após complementação                   73
-  Produtos com categoria não nula sem correspondência             0
-  Registros distintos em `analytics.geolocation`            738.332
+## Organização do repositório
 
-## Estrutura do repositório
-
-``` text
-.
-├── data/
-│   ├── raw/                  # CSVs originais (não versionados)
-│   └── processed/            # reservado para dados derivados
-├── docs/                     # documentação complementar
-├── images/                   # diagramas e imagens
-├── sql/
-│   ├── 01_setup/             # banco, schemas e tabelas raw
-│   ├── 02_profiling/         # validações iniciais
-│   └── 03_transformation/    # tabelas analytics, tratamento e restrições
-├── .gitignore
-└── README.md
+```text
+data/
+  raw/                    # CSVs locais, não versionados
+  processed/              # dados derivados
+sql/
+  01_setup/               # estrutura do banco e tabelas
+  02_profiling/           # inspeções iniciais
+  03_transformation/      # camada analytics
+  04_data_quality/        # reconciliação e completude
+  05_eda_sql/             # consultas analíticas (planejado)
+docs/                     # documentação e resultados
+images/                   # diagramas e figuras
+README.md
+PLANO_PROJETO.md
+ROADMAP_EDA_SQL.md
 ```
 
-## Como reproduzir
+## Documentação
 
-1.  Baixe os CSVs do
-    [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-    e coloque-os em `data/raw/`.
-2.  Execute os scripts de `sql/01_setup/` para criar banco, schemas e
-    tabelas de origem.
-3.  Importe os CSVs para `raw` utilizando o DBeaver e valide as
-    contagens com `sql/02_profiling/`.
-4.  Execute os scripts de `sql/03_transformation/` **em ordem
-    numérica**, respeitando dependências entre tabelas, cargas,
-    tratamentos e restrições.
+- [Plano geral do projeto](PLANO_PROJETO.md)
+- [Roadmap e perguntas da EDA SQL](ROADMAP_EDA_SQL.md)
+- [Relatório de qualidade dos dados](docs/data_quality_report.md)
 
-**Nota:** a ingestão foi manual via DBeaver; sua automação ainda não foi
-implementada. CSVs e credenciais não são versionados.
+## Reprodução do ambiente
 
-## Próximas etapas
+1. Baixar os nove CSVs no [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e armazená-los em `data/raw/`.
+2. Executar os scripts de `sql/01_setup/` conforme suas dependências.
+3. Importar os CSVs para `raw` via DBeaver e validar as cargas com `sql/02_profiling/`.
+4. Executar `sql/03_transformation/` na ordem definida pelos scripts.
+5. Consultar `sql/04_data_quality/` e a documentação para reproduzir as validações.
 
--   Aprofundar verificações de qualidade e documentar regras de negócio.
--   Desenvolver consultas analíticas com `JOIN`, agregações, CTEs e
-    funções de janela.
--   Analisar vendas, clientes, produtos, pagamentos e entregas.
--   Expandir o projeto com Python e dashboards em Power BI.
+**Nota:** a automação da ingestão em Python e o dashboard ainda não foram implementados; constam das próximas fases do projeto.
