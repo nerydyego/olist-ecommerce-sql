@@ -94,3 +94,23 @@ on c.customer_id = o.customer_id
 where o.order_status = 'delivered'
 group by c.customer_state
 order by quantidade desc;
+
+--=============================================================
+--Q05 - Qual é o valor bruto dos produtos vendidos e quanto 
+--foi cobrado de frete nos pedidos elegíveis?
+--===========================================================
+
+select * from analytics.order_items;
+select * from analytics.orders;
+
+select 
+	sum(i.price) valor_items, 
+	sum(i.freight_value) valor_frete,
+	sum(i.price) + sum(i.freight_value) valor_total,
+--	sum(i.price + i.freight_value) valor_total,
+	round(sum(i.price) / nullif(sum(i.price + i.freight_value), 0) *100.0 ,2) percentual_total_items,
+	round(sum(i.freight_value) / nullif(sum(i.price + i.freight_value), 0) *100.0 ,2) percentual_total_frete
+from analytics.order_items i
+inner join analytics.orders o
+on i.order_id = o.order_id
+where o.order_status = 'delivered';
