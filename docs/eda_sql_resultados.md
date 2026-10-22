@@ -2,7 +2,7 @@
 
 **Projeto:** Olist Brazilian E-Commerce Dataset  
 **Ambiente:** PostgreSQL 16 · Banco `olist_ecommerce` · Schema `analytics`  
-**Progresso:** **10/20 questões concluídas (50%)**  
+**Progresso:** **11/20 questões concluídas (55%)**  
 **Consultas:** [`sql/05_eda_sql/`](../sql/05_eda_sql/) · **Regras de negócio:** [`metricas_negocio.md`](metricas_negocio.md)
 
 ## Escopo e critérios
@@ -24,7 +24,7 @@
 
 **Nota temporal:** a Q03 compara jan./2017 a jul./2018, excluindo os meses das extremidades por cautela quanto à cobertura. Totais anuais de períodos parciais não são taxas de crescimento equivalentes.
 
-## Bloco B — Vendas e produtos (Q05–Q10)
+## Bloco B — Vendas e produtos (Q05–Q11)
 
 | Questão | Resultado principal |
 |---|---|
@@ -34,13 +34,15 @@
 | **Q08 — Vendas por UF do cliente** | SP: **R$ 5.067.633,16**; RJ: **R$ 1.759.651,13**; MG: **R$ 1.552.481,83**. Juntos, aproximadamente **63,38%** do total de produtos. |
 | **Q09 — Categorias** | Lideram **beleza_saude (R$ 1.233.131,72)**, **relogios_presentes (R$ 1.166.176,98)** e **cama_mesa_banho (R$ 1.023.434,76)**. Top 5: aproximadamente **39,83%** do valor bruto. |
 | **Q10 — Produtos líderes** | Produto de maior valor bruto: `bb50f2e236e5eea0100680137654686c` (**R$ 63.560,00**). Top 10: **R$ 442.814,82 (3,35%)** do valor bruto de produtos. |
+| **Q11 — Participação por categoria** | **74 grupos** (incluindo `NULL`); liderança de **beleza_saude (9,33%)**. As cinco maiores categorias somam **39,83%** do valor bruto. |
 
 **Categorias (Q09):** 73 categorias identificadas e um grupo sem categoria (`NULL`), com **R$ 170.726,63** em produtos. O grupo foi mantido na análise para preservar os totais.
 
 ### Validações e consistência
 
 - **Pedidos:** totais por status, período e UF reconciliados com os **96.478** pedidos entregues.
-- **Valor bruto de produtos:** somas mensais (Q07), por UF (Q08) e por categoria (Q09) reconciliadas com a Q05: **R$ 13.221.498,11**, sem diferença.
+- **Valor bruto de produtos:** somas mensais (Q07), por UF (Q08) e por categoria (Q09 e Q11) reconciliadas com a Q05: **R$ 13.221.498,11**, sem diferença.
+- **Q11 — Percentuais:** soma das participações arredondadas = **99,96%** (diferença de **0,04 p.p.** por arredondamento); soma dos valores por categoria = **R$ 13.221.498,11**.
 - **Top 10 de produtos (Q10):** representa somente uma parcela do total; não deve ser reconciliado isoladamente com o valor global.
 
 ## Síntese dos achados
@@ -52,9 +54,9 @@ As compras elegíveis concentram-se geograficamente no Sudeste, sobretudo em Sã
 | Bloco | Questões | Situação |
 |---|---|---|
 | A — Pedidos | Q01–Q04 | Concluído |
-| B — Vendas e produtos | Q05–Q11 | Q05–Q10 concluídas; **Q11 pendente** |
+| B — Vendas e produtos | Q05–Q11 | Concluído |
 | C — Clientes, vendedores e pagamentos | Q12–Q17 | Pendente |
 | D — Entregas e avaliações | Q18–Q20 | Pendente |
 
-**Próxima questão:** Q11 — participação percentual das categorias no valor bruto total de produtos.  
+**Próxima questão:** Q12 — análise de clientes (Bloco C).  
 **Reprodutibilidade:** consultas e transformações permanecem versionadas na pasta `sql/`; este documento registra apenas os resultados consolidados.
