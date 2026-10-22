@@ -2,7 +2,7 @@
 
 **Projeto:** Olist Brazilian E-Commerce Dataset  
 **Ambiente:** PostgreSQL 16 · Banco `olist_ecommerce` · Schema `analytics`  
-**Progresso:** **11/20 questões concluídas (55%)**  
+**Progresso:** **16/20 questões concluídas (80%)**  
 **Consultas:** [`sql/05_eda_sql/`](../sql/05_eda_sql/) · **Regras de negócio:** [`metricas_negocio.md`](metricas_negocio.md)
 
 ## Escopo e critérios
@@ -45,9 +45,28 @@
 - **Q11 — Percentuais:** soma das participações arredondadas = **99,96%** (diferença de **0,04 p.p.** por arredondamento); soma dos valores por categoria = **R$ 13.221.498,11**.
 - **Top 10 de produtos (Q10):** representa somente uma parcela do total; não deve ser reconciliado isoladamente com o valor global.
 
+## Bloco C — Clientes, vendedores e pagamentos (Q12–Q17)
+
+| Questão | Resultado principal |
+|---|---|
+| **Q12 — Clientes únicos** | **93.358** clientes distintos (`customer_unique_id`) com ao menos um pedido entregue. |
+| **Q13 — Clientes recorrentes** | **600** clientes realizaram pelo menos dois pedidos entregues (**0,64%** dos clientes únicos); somam **1.252** pedidos, com máximo de **7** por cliente. |
+| **Q14 — Clientes únicos por UF** | **27 UFs**; SP (**39.156**), RJ (**11.917**) e MG (**11.001**). Soma das contagens estaduais: **93.396**. |
+| **Q15 — Vendedores cadastrados por UF** | **3.095** vendedores distribuídos por **23 UFs**; maior concentração estadual: **1.849 vendedores** (**59,74%** do cadastro). UF líder não informada no resultado consolidado. |
+| **Q16 — Pedidos por forma de pagamento** | `credit_card`: **74.304**; `boleto`: **19.191**; `voucher`: **3.679**; `debit_card`: **1.485**. Soma das contagens por modalidade: **98.659**. |
+| **Q17 — Valor por forma de pagamento** | **Pendente**. |
+
+### Validações e cuidados de interpretação — Bloco C
+
+- **Q12–Q13:** recorrência observada = **600 / 93.358 ≈ 0,64%**; não representa taxa de retenção por coorte.
+- **Q14:** a soma de clientes distintos por UF (**93.396**) supera o total de clientes distintos globalmente (**93.358**) em **38 contagens**. Um identificador presente em mais de uma UF pode ser contado em cada uma delas; o número de pessoas envolvidas não foi apurado separadamente.
+- **Q15:** a soma por UF (**3.095**) coincide com a contagem de vendedores cadastrados. O máximo estadual é **1.849**, mas a UF correspondente ainda não foi registrada.
+- **Q16:** cada modalidade contabiliza `COUNT(DISTINCT order_id)` apenas entre pedidos `delivered`. A soma por modalidade (**98.659**) supera os **96.478** pedidos entregues em **2.181**; pedidos com múltiplas modalidades podem explicar contagens adicionais. Não foi realizada uma reconciliação específica de cobertura dos pagamentos.
+- **Q16 — Participação na soma por modalidade:** cartão de crédito **75,31%**; boleto **19,45%**; voucher **3,73%**; débito **1,51%**. O denominador é **98.659 contagens por modalidade**, não o total global de pedidos entregues.
+
 ## Síntese dos achados
 
-As compras elegíveis concentram-se geograficamente no Sudeste, sobretudo em São Paulo. O pico de pedidos e de valor bruto mensal de produtos ocorreu em **novembro de 2017**. As cinco principais categorias respondem por cerca de **39,83%** do valor bruto de produtos, enquanto os dez produtos líderes representam **3,35%**, indicando concentração distinta entre categorias e itens individuais.
+As compras elegíveis concentram-se geograficamente no Sudeste, sobretudo em São Paulo. O pico de pedidos e de valor bruto mensal de produtos ocorreu em **novembro de 2017**. As cinco principais categorias respondem por cerca de **39,83%** do valor bruto de produtos, enquanto os dez produtos líderes representam **3,35%**, indicando concentração distinta entre categorias e itens individuais. No bloco de clientes, apenas **0,64%** dos compradores únicos realizaram mais de um pedido entregue; nos pagamentos, o cartão de crédito predomina nas contagens por modalidade (**75,31%**).
 
 ## Andamento
 
@@ -55,8 +74,8 @@ As compras elegíveis concentram-se geograficamente no Sudeste, sobretudo em Sã
 |---|---|---|
 | A — Pedidos | Q01–Q04 | Concluído |
 | B — Vendas e produtos | Q05–Q11 | Concluído |
-| C — Clientes, vendedores e pagamentos | Q12–Q17 | Pendente |
+| C — Clientes, vendedores e pagamentos | Q12–Q17 | Q12–Q16 concluídas; Q17 pendente |
 | D — Entregas e avaliações | Q18–Q20 | Pendente |
 
-**Próxima questão:** Q12 — análise de clientes (Bloco C).  
+**Próxima questão:** Q17 — valor movimentado por forma de pagamento (Bloco C).  
 **Reprodutibilidade:** consultas e transformações permanecem versionadas na pasta `sql/`; este documento registra apenas os resultados consolidados.
