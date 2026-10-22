@@ -120,5 +120,28 @@ group by i.product_id
 order by preco desc
 limit 10;
 
+-- ============================================================
+-- Q11 - Participação percentual das categorias nas vendas
+-- Objetivo: calcular a participação de cada categoria
+-- no valor bruto total dos produtos vendidos.
+-- ============================================================
+
+
+select * from analytics.products;
+select * from analytics.orders;
+select * from analytics.order_items;
+
+select 
+	p.product_category_name as categoria,
+	sum(i.price) total_categoria,
+	round(sum(i.price) * 100.0 / sum(sum(i.price)) over(),2) as participacao_pct
+from analytics.orders o
+inner join analytics.order_items i
+on o.order_id = i.order_id 
+inner join analytics.products p 
+on i.product_id = p.product_id 
+where o.order_status = 'delivered'
+group by p.product_category_name
+order by total_categoria desc;
 
 	
