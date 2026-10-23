@@ -2,7 +2,7 @@
 
 Projeto de portfólio de **engenharia, análise e ciência de dados** com o [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). O objetivo é transformar dados transacionais em indicadores de negócio, evoluindo de **PostgreSQL e SQL** para **Python, Power BI e Machine Learning**.
 
-**Status:** preparação do banco e auditoria de qualidade concluídas no escopo definido. **Fase atual: análise exploratória com SQL.**
+**Status:** banco, auditoria de qualidade (no escopo definido) e **EDA SQL concluídos (20/20 questões)**. **Próxima fase: análises e validações com Python.**
 
 ## Tecnologias
 
@@ -37,6 +37,9 @@ A ingestão inicial foi realizada via DBeaver. O banco é executado em servidor 
 - **610 categorias vazias** em `products` normalizadas para `NULL`.
 - **2 categorias** acrescentadas à referência analítica para preservar o relacionamento com produtos, com tradução não disponível mantida como `NULL`.
 - Auditoria de **reconciliação e completude das 9 tabelas** documentada. Foram identificadas ausências em datas operacionais de pedidos e strings vazias em comentários de avaliações, sem correções arbitrárias.
+- **EDA SQL concluída:** 20 perguntas de negócio sobre pedidos, produtos, clientes, vendedores, pagamentos, entregas e avaliações.
+- **Principais indicadores (pedidos entregues):** 96.478 pedidos; **R$ 13,22 milhões** em produtos (sem frete); **R$ 159,83** de ticket médio (com frete); **93.358** clientes únicos; **12,56 dias** de tempo médio de entrega; **7.826** pedidos entregues após a data estimada.
+- **Pagamentos e satisfação:** **R$ 15,42 milhões** em pagamentos registrados; **96.361** registros de avaliação, dos quais **78,93%** têm notas 4 ou 5.
 
 > **Escopo da auditoria:** as verificações realizadas não equivalem a uma certificação completa de unicidade, consistência de negócio ou integridade de todos os atributos. Novas investigações ocorrerão apenas quando relevantes para os indicadores.
 
@@ -46,12 +49,12 @@ A ingestão inicial foi realizada via DBeaver. O banco é executado em servidor 
 |---|---|---|
 | 1. Banco e transformação | PostgreSQL, schemas, carga e modelagem relacional | Concluída |
 | 2. Qualidade dos dados | Reconciliação RAW × Analytics e completude | Concluída no escopo definido |
-| 3. EDA com SQL | **20 perguntas de negócio**, KPIs e insights documentados | **Em andamento — próxima execução** |
+| 3. EDA com SQL | **20 perguntas de negócio**, KPIs e insights documentados | **Concluída (20/20)** |
 | 4. Python | Reproduzir e validar análises selecionadas | Planejada |
 | 5. Power BI | Dashboard executivo com métricas consistentes | Planejada |
 | 6. Machine Learning | Problema preditivo, avaliação e limitações | Planejada |
 
-A EDA tem escopo fechado: pedidos, receita, produtos, clientes, vendedores, pagamentos, logística e avaliações. Os critérios de conclusão estão no [roadmap de EDA SQL](ROADMAP_EDA_SQL.md).
+A EDA SQL foi concluída no escopo planejado, abrangendo pedidos, valores comerciais, produtos, clientes, vendedores, pagamentos, logística e avaliações. Os resultados e critérios de cálculo estão documentados nos arquivos vinculados abaixo.
 
 ## Organização do repositório
 
@@ -64,7 +67,7 @@ sql/
   02_profiling/           # inspeções iniciais
   03_transformation/      # camada analytics
   04_data_quality/        # reconciliação e completude
-  05_eda_sql/             # consultas analíticas (planejado)
+  05_eda_sql/             # consultas analíticas Q01–Q20
 docs/                     # documentação e resultados
 images/                   # diagramas e figuras
 README.md
@@ -77,6 +80,8 @@ ROADMAP_EDA_SQL.md
 - [Plano geral do projeto](PLANO_PROJETO.md)
 - [Roadmap e perguntas da EDA SQL](ROADMAP_EDA_SQL.md)
 - [Relatório de qualidade dos dados](docs/data_quality_report.md)
+- [Resultados da EDA SQL](docs/eda_sql_resultados.md)
+- [Dicionário de métricas de negócio](docs/metricas_negocio.md)
 
 ## Reprodução do ambiente
 
@@ -85,5 +90,6 @@ ROADMAP_EDA_SQL.md
 3. Importar os CSVs para `raw` via DBeaver e validar as cargas com `sql/02_profiling/`.
 4. Executar `sql/03_transformation/` na ordem definida pelos scripts.
 5. Consultar `sql/04_data_quality/` e a documentação para reproduzir as validações.
+6. Executar as consultas em `sql/05_eda_sql/` e conferir os resultados e as definições em `docs/`.
 
-**Nota:** a automação da ingestão em Python e o dashboard ainda não foram implementados; constam das próximas fases do projeto.
+**Nota:** a automação da ingestão em Python, o dashboard Power BI e os experimentos de Machine Learning ainda não foram implementados; constam das próximas fases do projeto. Os valores comerciais do dataset não representam receita contábil reconhecida.

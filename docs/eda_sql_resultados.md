@@ -2,7 +2,7 @@
 
 **Projeto:** Olist Brazilian E-Commerce Dataset  
 **Ambiente:** PostgreSQL 16 · Banco `olist_ecommerce` · Schema `analytics`  
-**Progresso:** **16/20 questões concluídas (80%)**  
+**Progresso:** **20/20 questões concluídas (100%)**  
 **Consultas:** [`sql/05_eda_sql/`](../sql/05_eda_sql/) · **Regras de negócio:** [`metricas_negocio.md`](metricas_negocio.md)
 
 ## Escopo e critérios
@@ -54,7 +54,7 @@
 | **Q14 — Clientes únicos por UF** | **27 UFs**; SP (**39.156**), RJ (**11.917**) e MG (**11.001**). Soma das contagens estaduais: **93.396**. |
 | **Q15 — Vendedores cadastrados por UF** | **3.095** vendedores distribuídos por **23 UFs**; maior concentração estadual: **1.849 vendedores** (**59,74%** do cadastro). UF líder não informada no resultado consolidado. |
 | **Q16 — Pedidos por forma de pagamento** | `credit_card`: **74.304**; `boleto`: **19.191**; `voucher`: **3.679**; `debit_card`: **1.485**. Soma das contagens por modalidade: **98.659**. |
-| **Q17 — Valor por forma de pagamento** | **Pendente**. |
+| **Q17 — Valor por forma de pagamento** | Total de **R$ 15.422.461,77**; cartão de crédito **R$ 12.101.094,88**, boleto **R$ 2.769.932,58**, voucher **R$ 343.013,19** e débito **R$ 208.421,12**. |
 
 ### Validações e cuidados de interpretação — Bloco C
 
@@ -63,10 +63,27 @@
 - **Q15:** a soma por UF (**3.095**) coincide com a contagem de vendedores cadastrados. O máximo estadual é **1.849**, mas a UF correspondente ainda não foi registrada.
 - **Q16:** cada modalidade contabiliza `COUNT(DISTINCT order_id)` apenas entre pedidos `delivered`. A soma por modalidade (**98.659**) supera os **96.478** pedidos entregues em **2.181**; pedidos com múltiplas modalidades podem explicar contagens adicionais. Não foi realizada uma reconciliação específica de cobertura dos pagamentos.
 - **Q16 — Participação na soma por modalidade:** cartão de crédito **75,31%**; boleto **19,45%**; voucher **3,73%**; débito **1,51%**. O denominador é **98.659 contagens por modalidade**, não o total global de pedidos entregues.
+- **Q17 — Reconciliação financeira:** os pagamentos somam **R$ 15.422.461,77**, enquanto produtos + frete (Q05) somam **R$ 15.419.773,75**; diferença de **R$ 2.688,02 (aprox. 0,0174%)**. As medidas vêm de tabelas distintas e a causa da diferença não foi investigada.
+- **Q17 — Composição do valor pago:** cartão de crédito representa aproximadamente **78,46%** dos pagamentos registrados.
+
+## Bloco D — Entregas e avaliações (Q18–Q20)
+
+| Questão | Resultado principal |
+|---|---|
+| **Q18 — Tempo médio de entrega** | **12,56 dias** entre compra e entrega efetiva, considerando pedidos `delivered` com data de entrega preenchida. |
+| **Q19 — Pedidos entregues após o prazo estimado** | **7.826** pedidos com entrega efetiva posterior à data/hora estimada. |
+| **Q20 — Distribuição das avaliações** | **96.361** registros de avaliação de pedidos entregues: nota 1 (**9.406**), 2 (**2.941**), 3 (**7.961**), 4 (**18.987**) e 5 (**57.066**). |
+
+### Validações e cuidados de interpretação — Bloco D
+
+- **Q18:** a duração é calculada pela diferença entre os timestamps de entrega e compra, convertida em dias corridos com frações; o resultado não mede dias úteis nem cumprimento do prazo prometido.
+- **Q19:** o critério de atraso compara os timestamps completos (`entrega efetiva > entrega estimada`); a taxa exata de atraso não foi calculada, pois não foi apurado separadamente o denominador de pedidos entregues com ambas as datas preenchidas.
+- **Q20:** avaliações positivas (notas 4 e 5) totalizam **76.053 (78,93%)**; negativas (notas 1 e 2), **12.347 (12,81%)**. A nota média ponderada é de aproximadamente **4,16**.
+- **Q20 — Unidade de contagem:** o total de **96.361** corresponde a **registros de avaliação**, não a pedidos distintos. A diferença para os **96.478** pedidos entregues não permite concluir diretamente quantos pedidos ficaram sem avaliação.
 
 ## Síntese dos achados
 
-As compras elegíveis concentram-se geograficamente no Sudeste, sobretudo em São Paulo. O pico de pedidos e de valor bruto mensal de produtos ocorreu em **novembro de 2017**. As cinco principais categorias respondem por cerca de **39,83%** do valor bruto de produtos, enquanto os dez produtos líderes representam **3,35%**, indicando concentração distinta entre categorias e itens individuais. No bloco de clientes, apenas **0,64%** dos compradores únicos realizaram mais de um pedido entregue; nos pagamentos, o cartão de crédito predomina nas contagens por modalidade (**75,31%**).
+As compras elegíveis concentram-se no Sudeste, especialmente em São Paulo, e o pico de pedidos e de valor bruto mensal de produtos ocorreu em **novembro de 2017**. As cinco principais categorias representam cerca de **39,83%** do valor bruto de produtos, enquanto os dez produtos líderes representam **3,35%**. Entre os clientes únicos, **0,64%** realizaram mais de um pedido entregue. O cartão de crédito predomina tanto nas contagens por modalidade (**75,31%**) quanto no valor dos pagamentos (**78,46%**). Na logística, o tempo médio entre compra e entrega é de **12,56 dias**, e **7.826** pedidos ultrapassaram o prazo estimado segundo a comparação de timestamps. Nas avaliações, **78,93%** dos registros receberam notas 4 ou 5.
 
 ## Andamento
 
@@ -74,8 +91,9 @@ As compras elegíveis concentram-se geograficamente no Sudeste, sobretudo em Sã
 |---|---|---|
 | A — Pedidos | Q01–Q04 | Concluído |
 | B — Vendas e produtos | Q05–Q11 | Concluído |
-| C — Clientes, vendedores e pagamentos | Q12–Q17 | Q12–Q16 concluídas; Q17 pendente |
-| D — Entregas e avaliações | Q18–Q20 | Pendente |
+| C — Clientes, vendedores e pagamentos | Q12–Q17 | Concluído |
+| D — Entregas e avaliações | Q18–Q20 | Concluído |
 
-**Próxima questão:** Q17 — valor movimentado por forma de pagamento (Bloco C).  
+**Status:** EDA SQL concluída — **20/20 questões (100%)**.  
+**Próximos passos:** revisar `docs/metricas_negocio.md`, atualizar resumidamente o `README.md` e versionar a conclusão da etapa no GitHub.  
 **Reprodutibilidade:** consultas e transformações permanecem versionadas na pasta `sql/`; este documento registra apenas os resultados consolidados.
