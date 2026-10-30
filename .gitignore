@@ -59,3 +59,10 @@ sql/sql_templates.md
 /docs/PLANO_PROJETO.md
 /docs/ROADMAP_ETAPA_05_AUDITORIA_QUALIDADE.md
 /docs/ROADMAP_EDA_SQL.md
+/notebooks/roadmap_eda_python_02.md
+
+# Estrutura de pastas do projeto
+estrutura.txt
+
+# Vscode
+.vscode/
