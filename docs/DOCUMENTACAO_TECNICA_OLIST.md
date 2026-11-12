@@ -1,6 +1,6 @@
 # Olist Brazilian E-Commerce — Documentação técnica inicial
 
-**Versão:** 0.2 · **Atualização:** 17/10/2026 · **Estado:** parcial / contínuo  
+**Versão:** 0.3 · **Atualização:** 12/11/2026 · **Estado:** documentação evolutiva; EDA SQL e Python concluídas  
 **Repositório:** https://github.com/nerydyego/olist-ecommerce-sql  
 **Banco:** `olist_ecommerce` · **SGBD:** PostgreSQL 16 · **Ambiente:** PostgreSQL em Docker, servidor doméstico Ubuntu
 
@@ -10,7 +10,7 @@
 
 Construir um projeto de portfólio de ponta a ponta com o dataset público **Olist Brazilian E-Commerce**, demonstrando competências em ingestão, SQL, modelagem relacional, auditoria de dados, análise exploratória, Python, Power BI e, posteriormente, Machine Learning.
 
-**Escopo desta versão:** arquitetura do banco, organização dos scripts, inventário de tabelas, relacionamentos de referência, dicionário de dados inicial e registro de decisões técnicas. A auditoria complementar é a próxima etapa, não um resultado já concluído.
+**Escopo desta versão:** arquitetura do banco, organização dos scripts, inventário de tabelas, relacionamentos de referência, dicionário de dados inicial, decisões técnicas e resultados das etapas de qualidade, EDA SQL e EDA Python. O catálogo físico completo de constraints permanece pendente de verificação.
 
 ## 2. Arquitetura de dados
 
@@ -59,7 +59,7 @@ Arquivos CSV originais (9 datasets)
 
 **`analytics` — dados tipados e relacionáveis.** Contém as tabelas transformadas e preparadas para consultas. A criação das nove tabelas, conversão de tipos e implementação de chaves primárias e estrangeiras foram reportadas como concluídas. A definição exata de cada constraint e seus nomes devem ser extraídos do catálogo PostgreSQL e registrados na próxima revisão.
 
-**Camada analítica de consumo — planejada.** Consultas SQL, notebooks Python, modelo semântico Power BI e experimentos de ML serão desenvolvidos após auditoria e EDA. Não presumir que já exista um modelo dimensional em estrela.
+**Camada analítica de consumo — parcialmente implementada.** As consultas de EDA SQL (Q01–Q20) e os notebooks de EDA Python já foram desenvolvidos. O modelo semântico Power BI e os experimentos de ML permanecem planejados. Não presumir que já exista um modelo dimensional em estrela.
 
 ## 3. Inventário das fontes e tabelas
 
@@ -142,7 +142,8 @@ sql/
 ├── 01_setup/             # Configuração inicial do banco e objetos de infraestrutura
 ├── 02_profiling/         # Exploração inicial e perfilamento dos dados
 ├── 03_transformation/    # Transformações e estruturação da camada analytics
-└── 04_data_quality/     # Auditoria complementar de qualidade — etapa atual
+├── 04_data_quality/     # Auditoria de qualidade concluída no escopo
+└── 05_eda_sql/          # EDA SQL Q01–Q20 concluída
 ```
 
 O script `01_create_database.sql` foi registrado na etapa de setup. Os demais nomes de arquivos devem ser inventariados diretamente no repositório; esta documentação não presume nomes ou caminhos não verificados.
@@ -158,7 +159,10 @@ olist-ecommerce-sql/
 │   ├── 01_setup/
 │   ├── 02_profiling/
 │   ├── 03_transformation/
-│   └── 04_data_quality/
+│   ├── 04_data_quality/
+│   └── 05_eda_sql/
+├── notebooks/            # EDA Python: notebooks 01 e 02
+├── src/                  # Conexão PostgreSQL (database.py)
 ├── data/
 │   ├── raw/
 │   └── processed/
@@ -169,7 +173,7 @@ olist-ecommerce-sql/
 
 **Como documentar os scripts:** dentro de cada pasta existente, manter um inventário dos arquivos efetivamente presentes, contendo nome, objetivo, objetos afetados, dependências, ordem de execução e validação. Registrar os scripts de criação e carga no diretório em que **já se encontram**, sem inferir sua localização a partir do assunto. Novas análises e scripts devem seguir a organização existente; eventual ampliação será decidida e registrada antes de criar novas pastas.
 
-**Etapa atual:** `sql/04_data_quality/`, destinada às verificações complementares de qualidade após a transformação e aplicação de restrições em `analytics`.
+**Etapas concluídas:** `sql/04_data_quality/` (auditoria no escopo definido), `sql/05_eda_sql/` (20 questões) e EDA Python A01–A08. **Próxima fase:** Power BI.
 
 ## 7. Registro de decisões arquiteturais
 
@@ -180,8 +184,11 @@ olist-ecommerce-sql/
 | ADR-003 | Criar tabelas e carregar CSVs antes do profiling aprofundado | Desenvolvimento incremental e aprendizado orientado a etapas | Adotada |
 | ADR-004 | Tipagem e constraints na Analytics | Integridade relacional e preparação analítica | Implementação reportada; detalhes a catalogar |
 | ADR-005 | Manter scripts SQL no GitHub e CSVs brutos fora do versionamento | Reprodutibilidade com repositório leve | Adotada |
-| ADR-006 | Realizar auditoria antes da EDA | Conhecer limitações e confiabilidade das análises | Próxima etapa |
-| ADR-007 | Construir dashboards e ML somente após análises e definição de métricas | Evitar modelagem prematura e retrabalho | Planejada |
+| ADR-006 | Realizar auditoria antes da EDA | Conhecer limitações e confiabilidade das análises | Concluída no escopo definido |
+| ADR-007 | Construir dashboards e ML somente após análises e definição de métricas | Evitar modelagem prematura e retrabalho | EDA concluída; Power BI e ML pendentes |
+| ADR-008 | Usar Poetry, `.venv` e `.env` não versionado na EDA Python | Reprodutibilidade e isolamento de dependências/segredos | Adotada |
+| ADR-009 | Consolidar múltiplas avaliações por `order_id` pela média antes do merge | Preservar uma linha por pedido e evitar duplicações | Adotada na A08 |
+| ADR-010 | Definir atraso pela comparação de datas normalizadas | Entrega no próprio dia previsto conta como no prazo | Adotada na A07 |
 
 ## 8. Critérios de qualidade e pontos de atenção
 
@@ -193,10 +200,10 @@ A auditoria complementar deve cobrir: (1) contagem e reconciliação RAW × Anal
 
 | Marco | Evidência a acrescentar | Critério de conclusão |
 |---|---|---|
-| Auditoria (Etapa 5) | Contagens das 9 tabelas, indicadores de qualidade e exceções | Resultados reprodutíveis e decisões registradas |
+| Auditoria (Etapa 5) | Contagens das 9 tabelas, indicadores de qualidade e exceções | Concluída no escopo definido; consultar relatório de qualidade |
 | Catálogo físico | DDL efetiva, tipos, PK, FK, índices e constraints | Correspondência com o catálogo do PostgreSQL |
-| EDA SQL | Perguntas de negócio, consultas e resultados | Insights verificáveis e sem duplicação de métricas |
-| Python | Notebooks, dependências e fluxo de conexão/extração | Execução reproduzível |
+| EDA SQL | Perguntas de negócio, consultas e resultados | Concluída (Q01–Q20) |
+| Python | Notebooks, dependências e fluxo de conexão/extração | EDA A01–A08 e C01 concluídas; execução limpa do notebook a confirmar |
 | Power BI | Modelo semântico, medidas DAX e páginas | Indicadores conciliados com SQL |
 | Machine Learning | Problema, target, features, split, baseline e métricas | Experimento documentado e avaliação sem vazamento |
 | Encerramento | README final, arquitetura atualizada e limitações | Portfólio navegável e reproduzível |
@@ -212,10 +219,54 @@ A auditoria complementar deve cobrir: (1) contagem e reconciliação RAW × Anal
 - [x] Registro inicial das decisões arquiteturais.
 - [ ] Inventário físico completo de todas as colunas e tipos de `analytics`.
 - [ ] Listagem verificada de PKs, FKs, índices e ações referenciais.
-- [ ] Contagens reconciliadas das nove tabelas RAW e Analytics.
+- [x] Contagens reconciliadas das nove tabelas RAW e Analytics, com exceções documentadas.
 - [ ] Diagrama entidade-relacionamento fiel ao banco implementado.
-- [ ] Resultados e recomendações da auditoria da Etapa 5.
+- [x] Resultados e recomendações da auditoria no escopo definido.
 
 ---
 
-**Próxima ação:** iniciar a Etapa 5 pela reconciliação de registros RAW × Analytics. Atualizar esta documentação após cada bloco validado; não antecipar como concluídas atividades ainda não executadas.
+**Próxima ação:** preparar o dashboard Power BI a partir das métricas já definidas. Confirmar a execução limpa do notebook 02 e catalogar constraints físicas apenas quando necessário, sem reabrir a auditoria.
+
+## 11. EDA SQL e Python — implementação e resultados (12/11/2026)
+
+### 11.1 Etapas concluídas
+
+- **EDA SQL:** 20 questões de negócio concluídas, com consultas em `sql/05_eda_sql/` e resultados documentados em `docs/eda_sql_resultados.md`.
+- **EDA Python:** `notebooks/01_exploracao_inicial.ipynb` e `notebooks/02_analise_exploratoria.ipynb`, utilizando Python 3.12, Poetry, pandas, SQLAlchemy e Matplotlib/Seaborn.
+- **Conexão:** `src/database.py` cria o `engine` SQLAlchemy com variáveis de ambiente lidas do `.env`. O PostgreSQL permanece acessível por túnel SSH.
+- **Escopo do notebook 02:** A01 indicadores comerciais; A02 evolução mensal; A03 top 10 categorias; A04 concentração de categorias; A05 vendas por UF do cliente; A06 tempo de entrega; A07 atrasos; A08 atrasos versus avaliações; C01 síntese final.
+
+### 11.2 Indicadores e regras de negócio
+
+| Indicador | Resultado | Definição / base |
+|---|---:|---|
+| Pedidos entregues | 96.478 | `orders.order_status = 'delivered'` |
+| Itens vendidos | 110.197 | Registros de `order_items` associados a pedidos entregues |
+| Valor dos produtos | R$ 13.221.498,11 | Soma de `order_items.price`, sem frete |
+| Frete | R$ 2.198.275,64 | Soma de `order_items.freight_value` |
+| Produtos + frete | R$ 15.419.773,75 | Soma dos dois componentes |
+| Ticket médio com frete | R$ 159,83 | (Produtos + frete) / pedidos entregues |
+| Maior mês de vendas de produtos | 2017-11: R$ 987.765,37 | Agregação por mês da compra |
+| Participação das 10 categorias líderes | 62,43% | Participação na receita de produtos |
+| Maior UF por receita de produtos | SP: R$ 5.067.633,16 | UF do cliente |
+| Pedidos entregues com datas logísticas válidas | 96.470 | Excluídos 8 sem data efetiva de entrega |
+| Tempo médio de entrega | 12,56 dias | Data de entrega menos data da compra |
+| Atrasos (critério Python) | 6.534 (6,77%) | Data efetiva normalizada > data estimada normalizada |
+| Pedidos com avaliação na base logística | 95.824 | Junção por `order_id`, após consolidação |
+| Nota média — no prazo | 4,29 | Média de `review_score` dos pedidos avaliados |
+| Nota média — com atraso | 2,27 | Média de `review_score` dos pedidos avaliados |
+
+**Reconciliação e comparabilidade:** a EDA SQL registrou 7.826 entregas posteriores à data estimada, enquanto a A07 Python encontrou 6.534 atrasos usando **dias de calendário** e 96.470 registros com data de entrega válida. Não tratar os dois valores como equivalentes sem alinhar o predicado temporal e a população elegível.
+
+### 11.3 Granularidade, qualidade e limitações
+
+- `orders` tem grão de **pedido**; `order_items`, de **item**; `order_reviews`, de **avaliação**. As junções devem respeitar essa diferença.
+- `analytics.order_reviews` contém 99.224 registros e 98.673 `order_id` distintos, ou seja, 551 avaliações excedentes em relação à unicidade por pedido. A A08 agregou `review_score` por `order_id` com `mean()`, obtendo 98.673 linhas únicas.
+- A junção `df_logistica` (96.470 linhas) × avaliações consolidadas foi realizada com `how='left'` e `validate='one_to_one'`; manteve 96.470 pedidos e identificou 646 sem avaliação.
+- O cálculo de médias ignora `review_score` ausente. A associação entre atraso e nota inferior é **descritiva**, não causal.
+- A análise não certifica todos os atributos do banco, não constitui demonstração contábil de receita e não inclui testes de inferência causal.
+- **Reprodutibilidade:** verificar a execução sequencial do notebook 02 em kernel reiniciado com conexão PostgreSQL ativa; essa verificação não foi confirmada nesta atualização.
+
+### 11.4 Artefatos e sequência futura
+
+A documentação comercial permanece em `docs/metricas_negocio.md`; o histórico SQL em `docs/eda_sql_resultados.md`; o roteiro Python em `notebooks/roadmap_eda_python_02.md`. A próxima fase é a modelagem e visualização no Power BI; Machine Learning continua no planejamento.
