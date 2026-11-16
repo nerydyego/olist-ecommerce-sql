@@ -1,3 +1,13 @@
+# SQL
 *.sql linguist-detectable=true
-*.sql linguist-language=sql
+*.sql linguist-language=SQL
 *.sql text
+
+# Power BI
+*.pbix binary
+*.pbit binary
+*.pbip text
+
+# Modelo semântico e relatório
+*.tmdl text
+*.json text
