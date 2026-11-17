@@ -1,0 +1,24 @@
+relationship AutoDetected_6aa64f20-540d-441b-992d-161db151ce40
+	fromColumn: 'bi fato_pedidos'.customer_id
+	toColumn: 'bi dim_cliente'.customer_id
+
+relationship AutoDetected_705064b0-c186-4476-94e4-dfff365a0605
+	fromColumn: 'bi fato_vendas'.customer_id
+	toColumn: 'bi dim_cliente'.customer_id
+
+relationship AutoDetected_ad825d5d-e9c4-4230-be07-3cfd36ff061d
+	fromColumn: 'bi fato_vendas'.product_id
+	toColumn: 'bi dim_produto'.product_id
+
+relationship AutoDetected_e12f2c9a-3b9d-4ac2-a3a5-f56b99ae01a9
+	fromColumn: 'bi fato_vendas'.seller_id
+	toColumn: 'bi dim_vendedor'.seller_id
+
+relationship 9eea4847-1e89-cf37-c253-c1e749c155fc
+	fromColumn: 'bi fato_vendas'.DataCompra
+	toColumn: Dim_Data.Date
+
+relationship 5d612f8b-bda6-a811-0541-5c7b0b50259a
+	fromColumn: 'bi fato_pedidos'.DataCompra
+	toColumn: Dim_Data.Date
+

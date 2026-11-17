@@ -1,0 +1,57 @@
+table Dim_Data
+	lineageTag: 8ee8a792-1722-48e2-9685-6e537e6bdabe
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: e8ba64ef-9be9-437f-aee5-4d8ff405ec50
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano = YEAR(Dim_Data[Date])
+		formatString: 0
+		lineageTag: 17328b8e-dec9-41c6-b2cf-4df516989f5b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero = MONTH(Dim_Data[Date])
+		formatString: 0
+		lineageTag: 0dccc6ec-b198-479f-86ca-4415be5f25e2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNome = FORMAT(Dim_Data[Date], "MMMM")
+		lineageTag: 938d8628-ec71-45fe-b5ff-c9c2a4103451
+		summarizeBy: none
+		sortByColumn: MesNumero
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnoMes = FORMAT(Dim_Data[Date], "yyyy-MM")
+		lineageTag: d10d1139-195b-41a7-8fa9-ae8d27bb93be
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre = QUARTER(Dim_Data[Date])
+		formatString: 0
+		lineageTag: 7e4f0492-48d8-49db-bd34-d933a41529e1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Data = calculated
+		mode: import
+		source =
+				CALENDAR(
+				    DATE(2016,1,1),
+				    DATE(2018,12,31))
+
+	annotation PBI_Id = 2ff68e5d0041496daefbe5d06a91ca3e
+

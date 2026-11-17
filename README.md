@@ -2,12 +2,12 @@
 
 Projeto de portfólio de **engenharia, análise e ciência de dados** com o [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). O objetivo é transformar dados transacionais em indicadores de negócio, evoluindo de **PostgreSQL e SQL** para **Python, Power BI e Machine Learning**.
 
-**Status:** banco, qualidade de dados, **EDA SQL (20/20 questões)** e **EDA Python (A01–A08 e conclusões C01)** concluídos no escopo definido. **Próxima fase:** dashboard Power BI.
+**Status:** banco, qualidade de dados, **EDA SQL (20/20 questões)** e **EDA Python (A01–A08 e conclusões C01)** concluídos no escopo definido. **Power BI em desenvolvimento:** views de BI, modelo dimensional, calendário e primeira medida DAX implementados.
 
 ## Tecnologias
 
-- **Utilizadas:** PostgreSQL 16, SQL, DBeaver, Docker, Ubuntu Server, Python 3.12, Poetry, pandas, SQLAlchemy, Matplotlib, Jupyter, Git e GitHub.
-- **Próximas fases:** Power BI e Machine Learning.
+- **Utilizadas:** PostgreSQL 16, SQL, DBeaver, Docker, Ubuntu Server, Python 3.12, Poetry, pandas, SQLAlchemy, Matplotlib, Jupyter, Power BI (Power Query, DAX e PBIP), Git e GitHub.
+- **Próxima fase:** Machine Learning, após a conclusão do dashboard Power BI.
 
 ## Arquitetura de dados
 
@@ -17,7 +17,8 @@ Projeto de portfólio de **engenharia, análise e ciência de dados** com o [Bra
          v
 PostgreSQL: olist_ecommerce
     |-- raw        Dados originais preservados (TEXT)
-    `-- analytics  Tipagem, transformações e relacionamentos
+    |-- analytics  Tipagem, transformações e relacionamentos
+    `-- bi         Views dimensionais e fatos para Power BI
          |
          v
    Análise exploratória SQL (concluída)
@@ -25,7 +26,7 @@ PostgreSQL: olist_ecommerce
          v
    Python / EDA e validação (concluída)
          |
-         +--> Power BI / dashboard (planejado)
+         +--> Power BI / modelo dimensional e dashboard (em desenvolvimento)
          `--> Machine Learning / experimento (planejado)
 ```
 
@@ -43,6 +44,7 @@ A ingestão inicial foi realizada via DBeaver. O banco é executado em servidor 
 - **Principais indicadores comerciais (pedidos entregues):** 96.478 pedidos; **110.197 itens**; **R$ 13,22 milhões** em produtos (sem frete); **R$ 159,83** de ticket médio (com frete); **93.358** clientes únicos.
 - **Pagamentos e satisfação:** **R$ 15,42 milhões** em pagamentos registrados; **96.361** registros de avaliação, dos quais **78,93%** têm notas 4 ou 5.
 - **EDA Python concluída (A01–A08):** análise comercial, evolução mensal, ranking e concentração de categorias, distribuição por UF, logística e relação entre atrasos e avaliações. Conexão ao PostgreSQL com SQLAlchemy e junções validadas conforme a granularidade.
+- **Power BI em desenvolvimento:** cinco views SQL no schema `bi` (`dim_cliente`, `dim_produto`, `dim_vendedor`, `fato_vendas` e `fato_pedidos`), importadas para modelo dimensional com relacionamentos 1:N e filtro unidirecional. A `Dim_Data` foi criada em DAX, marcada como tabela de datas e relacionada às duas tabelas fato por `DataCompra`, derivada no Power Query. Primeira medida `Faturamento_Produtos` implementada e conferida em cartão (aproximadamente R$ 13,22 milhões).
 - **Reconciliação SQL × Python:** **R$ 13.221.498,11** em produtos, **R$ 2.198.275,64** em frete, **R$ 15.419.773,75** em produtos + frete e **R$ 159,83** de ticket médio.
 - **Destaques da EDA Python:** pico mensal de produtos em novembro/2017 (**R$ 987.765,37**); 10 categorias líderes respondem por **62,43%** da receita de produtos; São Paulo lidera o faturamento (**R$ 5.067.633,16**).
 - **Logística e satisfação (EDA Python):** entre **96.470** pedidos entregues com datas válidas, tempo médio de entrega de **12,56 dias** e **6.534** atrasos (**6,77%**), pela comparação de **dias de calendário**. Entre **95.824** pedidos com avaliação associada, a nota média foi **4,29** no prazo e **2,27** com atraso. A associação observada não demonstra causalidade.
@@ -58,10 +60,10 @@ A ingestão inicial foi realizada via DBeaver. O banco é executado em servidor 
 | 2. Qualidade dos dados | Reconciliação RAW × Analytics e completude | Concluída no escopo definido |
 | 3. EDA com SQL | **20 perguntas de negócio**, KPIs e insights documentados | **Concluída (20/20)** |
 | 4. Python | EDA A01–A08, validação de KPIs, gráficos e síntese C01 | **Concluída no escopo definido** |
-| 5. Power BI | Dashboard executivo com métricas consistentes | Planejada |
+| 5. Power BI | Views `bi`, modelo dimensional, medidas DAX e dashboard executivo | **Em desenvolvimento** — modelagem concluída; medidas e visuais em andamento |
 | 6. Machine Learning | Problema preditivo, avaliação e limitações | Planejada |
 
-As análises SQL e Python foram concluídas no escopo planejado. A próxima fase é o dashboard Power BI; a execução integral dos notebooks em kernel reiniciado permanece como verificação final de reprodutibilidade, se ainda não realizada.
+As análises SQL e Python foram concluídas no escopo planejado. A fase Power BI está em andamento: o modelo e os relacionamentos estão configurados, e a construção das medidas e do dashboard prossegue. A execução integral dos notebooks em kernel reiniciado permanece como verificação final de reprodutibilidade, se ainda não realizada.
 
 ## Organização do repositório
 
@@ -75,10 +77,12 @@ sql/
   03_transformation/      # camada analytics
   04_data_quality/        # reconciliação e completude
   05_eda_sql/             # consultas analíticas Q01–Q20
+  06_bi_views/            # views SQL para o modelo Power BI
 notebooks/                # 01_exploracao_inicial.ipynb e 02_analise_exploratoria.ipynb
 src/                      # módulo de conexão ao PostgreSQL
 docs/                     # documentação e resultados
 images/                   # diagramas e figuras
+power_bi/                 # projeto Power BI (.pbip, relatório e modelo semântico)
 pyproject.toml            # configuração e dependências Poetry
 poetry.lock               # versões resolvidas das dependências
 poetry.toml               # configuração local do ambiente Poetry
@@ -106,5 +110,6 @@ ROADMAP_EDA_SQL.md
 5. Consultar `sql/04_data_quality/` e a documentação para reproduzir as validações.
 6. Executar as consultas em `sql/05_eda_sql/` e conferir os resultados e as definições em `docs/`.
 7. Para reproduzir a EDA Python, instalar as dependências com `poetry install`, configurar as variáveis de conexão em `.env`, manter o túnel SSH ativo e executar, em ordem, `notebooks/01_exploracao_inicial.ipynb` e `notebooks/02_analise_exploratoria.ipynb` com o kernel do Poetry.
+8. Para trabalhar no Power BI, criar as views de `sql/06_bi_views/`, abrir `power_bi/olist_ecommerce.pbip`, configurar a fonte PostgreSQL local e atualizar os dados. O túnel SSH é necessário quando o banco é acessado remotamente.
 
-**Nota:** `.env`, `.venv/` e os CSVs locais não são versionados. A ingestão automatizada em Python, o dashboard Power BI e o Machine Learning ainda não foram implementados. Os valores comerciais do dataset não representam receita contábil reconhecida.
+**Nota:** `.env`, `.venv/` e os CSVs locais não são versionados. A ingestão automatizada em Python e o Machine Learning não fazem parte das entregas já concluídas; o dashboard Power BI está em desenvolvimento. Arquivos locais de cache e configurações do Power BI (`.pbi/cache.abf` e `.pbi/localSettings.json`) também não são versionados. Os valores comerciais do dataset não representam receita contábil reconhecida.

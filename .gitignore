@@ -66,3 +66,9 @@ estrutura.txt
 
 # Vscode
 .vscode/
+
+# Power BI - configurações locais e cache de dados
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+# Configurações locais do Power BI
+**/.pbi/

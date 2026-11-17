@@ -1,0 +1,54 @@
+table 'bi dim_cliente'
+	lineageTag: 56dcc0b7-4ee7-479b-a641-749bd8ca0541
+
+	column customer_id
+		dataType: string
+		lineageTag: a1e901a2-4120-49b1-b74d-58bf2c4cfee7
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_unique_id
+		dataType: string
+		lineageTag: d2c0d7cf-99df-400f-a6ce-1f6d13c3f741
+		summarizeBy: none
+		sourceColumn: customer_unique_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_zip_code_prefix
+		dataType: string
+		lineageTag: 86655c23-266b-4e21-81f0-645ba6e6214b
+		summarizeBy: none
+		sourceColumn: customer_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_city
+		dataType: string
+		lineageTag: 58c66755-8b45-4d17-9a55-7e20c95086c2
+		summarizeBy: none
+		sourceColumn: customer_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_state
+		dataType: string
+		lineageTag: aaf80085-7b01-4ebf-a7a1-93ba7784e967
+		summarizeBy: none
+		sourceColumn: customer_state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bi dim_cliente' = m
+		mode: import
+		source =
+				let
+				  Origem = PostgreSQL.Database("127.0.0.1:5433", "olist_ecommerce"),
+				  #"Navegação 1" = Origem{[Schema = "bi", Item = "dim_cliente"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,104 @@
+table 'bi fato_vendas'
+	lineageTag: fe57ed6b-4ab2-4d65-818c-f3a7d0611c7e
+
+	measure Faturamento_Produtos = SUM('bi fato_vendas'[price])
+		lineageTag: 4bd1de44-3b19-4cf5-98d0-22c38b168443
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_id
+		dataType: string
+		lineageTag: 3d302c85-a59c-471d-9732-f7d865c19a11
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: eda18184-c936-428e-ba28-1f6614069266
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: 7477c759-48dd-4cd6-9003-f35d4fac1edd
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		lineageTag: 8f0c95b3-ab09-4ed0-979a-7a506fe44a67
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: 3ec0dcec-92a5-44ed-9384-0aa57a87366e
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_purchase_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3e8a2de3-7704-450a-ba26-601471a30f69
+		summarizeBy: none
+		sourceColumn: order_purchase_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: double
+		lineageTag: 8d06abce-c093-44d1-8299-0cfbe0212e03
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column freight_value
+		dataType: double
+		lineageTag: 6f345b61-5157-45f9-8ba4-f7dea0550602
+		summarizeBy: sum
+		sourceColumn: freight_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DataCompra
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9b39d75c-0381-44d4-b248-dc8553a4c6aa
+		summarizeBy: none
+		sourceColumn: DataCompra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'bi fato_vendas' = m
+		mode: import
+		source =
+				let
+				  Origem = PostgreSQL.Database("127.0.0.1:5433", "olist_ecommerce"),
+				  #"Navegação 1" = Origem{[Schema = "bi", Item = "fato_vendas"]}[Data],
+				  #"Data inserida" = Table.AddColumn(#"Navegação 1", "Data", each DateTime.Date([order_purchase_timestamp]), type nullable date),
+				  #"Colunas renomeadas" = Table.RenameColumns(#"Data inserida", {{"Data", "DataCompra"}})
+				in
+				  #"Colunas renomeadas"
+
+	annotation PBI_ResultType = Table
+

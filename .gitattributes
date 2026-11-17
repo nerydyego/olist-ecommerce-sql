@@ -3,11 +3,17 @@
 *.sql linguist-language=SQL
 *.sql text
 
-# Power BI
+# Power BI Project
+*.pbip text eol=lf
+*.tmdl text eol=lf
+*.pbir text eol=lf
+# Arquivos binários do Power BI
 *.pbix binary
 *.pbit binary
-*.pbip text
+*.abf binary
 
 # Modelo semântico e relatório
 *.tmdl text
 *.json text
+*.json linguist-detectable=true
+*.json linguist-language=json

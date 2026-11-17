@@ -1,0 +1,24 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["bi dim_cliente","bi dim_produto","bi dim_vendedor","bi fato_pedidos","bi fato_vendas"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
+
+ref table 'bi dim_cliente'
+ref table 'bi dim_produto'
+ref table 'bi dim_vendedor'
+ref table 'bi fato_pedidos'
+ref table 'bi fato_vendas'
+ref table Dim_Data
+
+ref cultureInfo pt-BR
+

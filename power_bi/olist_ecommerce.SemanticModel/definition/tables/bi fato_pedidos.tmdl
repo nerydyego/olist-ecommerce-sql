@@ -1,0 +1,96 @@
+table 'bi fato_pedidos'
+	lineageTag: a9ad4976-9f7e-469c-9433-b8c51c1aa585
+
+	column order_id
+		dataType: string
+		lineageTag: 1bee4cc6-d650-42c0-938a-8f321ff943e1
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: ddfec3ad-4966-4d16-a435-559b4a0142b9
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 71eccfce-4b52-494d-bf8e-6c912ff1800c
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_purchase_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4677331b-8536-4082-a72d-814094db352e
+		summarizeBy: none
+		sourceColumn: order_purchase_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_approved_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 46514f67-a936-47fe-ab04-1308aa45cac1
+		summarizeBy: none
+		sourceColumn: order_approved_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_carrier_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 250af58e-429b-4368-b29c-3a1536604383
+		summarizeBy: none
+		sourceColumn: order_delivered_carrier_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_customer_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f8c1ccd9-aa77-4e12-93cc-0245ae7f843f
+		summarizeBy: none
+		sourceColumn: order_delivered_customer_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_estimated_delivery_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9cab60cd-d65a-4cde-b6a1-f3c595daa69a
+		summarizeBy: none
+		sourceColumn: order_estimated_delivery_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataCompra
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 60c33add-b1bd-45a0-b462-e566722f7f29
+		summarizeBy: none
+		sourceColumn: DataCompra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'bi fato_pedidos' = m
+		mode: import
+		source =
+				let
+				  Origem = PostgreSQL.Database("127.0.0.1:5433", "olist_ecommerce"),
+				  #"Navegação 1" = Origem{[Schema = "bi", Item = "fato_pedidos"]}[Data],
+				  #"Data inserida" = Table.AddColumn(#"Navegação 1", "Data", each DateTime.Date([order_purchase_timestamp]), type nullable date),
+				  #"Colunas renomeadas" = Table.RenameColumns(#"Data inserida", {{"Data", "DataCompra"}})
+				in
+				  #"Colunas renomeadas"
+
+	annotation PBI_ResultType = Table
+
