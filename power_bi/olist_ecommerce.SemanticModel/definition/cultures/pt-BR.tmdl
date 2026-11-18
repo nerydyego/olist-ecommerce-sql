@@ -1,2 +1,6958 @@
 cultureInfo pt-BR
 
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "bi_dim_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bi dim_cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente.customer_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_cliente",
+			          "ConceptualProperty": "customer_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente.customer_unique_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_cliente",
+			          "ConceptualProperty": "customer_unique_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer unique id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_unique_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customer unique identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "customer unique identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "customer unique identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "customer unique credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "client unique id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "consumer unique id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "user unique id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "buyer unique id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "patron unique id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "purchaser unique id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente.customer_zip_code_prefix": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_cliente",
+			          "ConceptualProperty": "customer_zip_code_prefix"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer zip code prefix": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_zip_code_prefix": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "prefix": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "code prefix": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "zip code prefix": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "client zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "consumer zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "user zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "buyer zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "patron zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "purchaser zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "shopper zip code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "customer zip id prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "zip id prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "id prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente.customer_city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_cliente",
+			          "ConceptualProperty": "customer_city"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_city": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "customer town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente.customer_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_cliente",
+			          "ConceptualProperty": "customer_state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_state": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "customer condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bi dim_produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "product": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "product identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "artifact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "product credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "merchandise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "produce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "artifact id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "merchandise id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_category_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_category_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product category name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_category_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "product category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "product classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product category nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "product category title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "product category label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "product category tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "product class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_category_name_english": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_category_name_english"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product category name english": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_category_name_english": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "english": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "name english": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category name english": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact category name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "product classification name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "classification name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item category name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "merchandise category name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "produce category name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "product class name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "product group name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "product type name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "product grouping name english": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_name_lenght": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_name_lenght"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product name lenght": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_name_lenght": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "artifact name lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item name lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise name lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce name lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product nickname lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product title lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product label lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product tag lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_description_lenght": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_description_lenght"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product description lenght": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_description_lenght": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "artifact description lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "product appearance lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "product descriptor lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "product explanation lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "product specification lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item description lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise description lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce description lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product account lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "product overview lenght": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_photos_qty": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_photos_qty"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product photos qty": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product photo qty": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "product_photos_qty": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "artifact photo qty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item photo qty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise photo qty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce photo qty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_weight_g": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_weight_g"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product weight g": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_weight_g": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "g": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "weight g": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact weight g": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item weight g": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise weight g": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce weight g": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_length_cm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_length_cm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product length cm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_length_cm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "length cm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact length cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item length cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise length cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce length cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_height_cm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_height_cm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product height cm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_height_cm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "height cm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact height cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item height cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise height cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce height cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_produto.product_width_cm": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_produto",
+			          "ConceptualProperty": "product_width_cm"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product width cm": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_width_cm": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "width cm": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact width cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "item width cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "merchandise width cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "produce width cm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_vendedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bi dim_vendedor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor.seller_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_vendedor",
+			          "ConceptualProperty": "seller_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seller id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "seller": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vender": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vendor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "retailer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor.seller_zip_code_prefix": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_vendedor",
+			          "ConceptualProperty": "seller_zip_code_prefix"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seller zip code prefix": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller_zip_code_prefix": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "prefix": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "code prefix": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "zip code prefix": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller zip id prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "zip id prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "id prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "seller zip key prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "zip key prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "key prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "seller location prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.555
+			          }
+			        },
+			        {
+			          "seller postcode prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.555
+			          }
+			        },
+			        {
+			          "seller post code prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.549
+			          }
+			        },
+			        {
+			          "location prefix": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.548
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor.seller_city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_vendedor",
+			          "ConceptualProperty": "seller_city"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seller city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller_city": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "seller town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "seller metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor.seller_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi dim_vendedor",
+			          "ConceptualProperty": "seller_state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seller state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller_state": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "seller condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "seller country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bi fato_pedido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido.order_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido.customer_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "customer_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "customer id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido.order_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_status": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "order condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "order class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "order grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido.order_purchase_timestamp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_purchase_timestamp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order purchase timestamp": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_purchase_timestamp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "timestamp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase timestamp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_pedido.order_approved_at": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_approved_at"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order approved at": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_approved_at": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "instruction approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "direction approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "edict approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "command approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "directive approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "demand approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "mandate approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "imperative approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "stability approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "harmony approved at": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_pedido.order_delivered_carrier_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_delivered_carrier_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order delivered carrier date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_delivered_carrier_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order delivered carrier moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "order delivered carrier period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_pedido.order_delivered_customer_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_delivered_customer_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order delivered customer date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_delivered_customer_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order delivered customer moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "order delivered customer period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "order delivered client date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order delivered consumer date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order delivered user date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order delivered buyer date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order delivered patron date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order delivered purchaser date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order delivered shopper date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_pedido.order_estimated_delivery_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "order_estimated_delivery_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order estimated delivery date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_estimated_delivery_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order estimated delivery moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "order estimated delivery period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_pedido.data_compra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_pedidos",
+			          "ConceptualProperty": "DataCompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data compra": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DataCompra": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_venda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bi fato_venda": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.order_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "order_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.order_item_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "order_item_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order item id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_item_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "item": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order item": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "item id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order item identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order item identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order item identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "item identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "item identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "item identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order item credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.product_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "product_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "product id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "product": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "product identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "product identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "artifact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "product credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "merchandise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "produce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "artifact id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "merchandise id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.seller_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "seller_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "seller id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "seller": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vender": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vendor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "retailer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.customer_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "customer_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "customer id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.order_purchase_timestamp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "order_purchase_timestamp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order purchase timestamp": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_purchase_timestamp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "timestamp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "purchase timestamp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bi_fato_venda.price": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "price"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "expense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "outlay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "penalty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "punishment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.freight_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "freight_value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "freight value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "freight_value": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "freight assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "freight worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "freight price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "freight cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "freight charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "freight rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "bi_fato_venda.data_compra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bi fato_vendas",
+			          "ConceptualProperty": "DataCompra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data compra": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DataCompra": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record compra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Data": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "data": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "dim document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.mes_nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "MesNome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nome": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.ano_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "AnoMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AnoMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_data.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Data",
+			          "ConceptualProperty": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.faturamento_produtos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_medidas",
+			          "ConceptualProperty": "Faturamento_Produtos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faturamento produtos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Faturamento_Produtos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Vendas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.valor_frete": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_medidas",
+			          "ConceptualProperty": "Valor_frete"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor frete": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_frete": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Frete": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.valor_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_medidas",
+			          "ConceptualProperty": "Valor_total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Valor_total": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "valor aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "valor overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.total_pedidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_medidas",
+			          "ConceptualProperty": "Total_pedidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total pedidos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Total_pedidos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate pedido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall pedido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.ticket_médio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_medidas",
+			          "ConceptualProperty": "Ticket_Médio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket médio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ticket_Médio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "bi_fato_venda_has_bi_dim_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          },
+			          "Nouns": [
+			            {
+			              "customer": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_bi_dim_clientes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_bi_fato_vendas"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_dim_data": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "dim_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_dim_data"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_bi_fato_pedidos"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_bi_dim_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          },
+			          "Nouns": [
+			            {
+			              "customer": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_bi_dim_clientes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_bi_fato_pedidos"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_entity__medida_ticket_médio": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "entity__medida.ticket_médio": {
+			          "Target": {
+			            "Entity": "entity__medida.ticket_médio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.ticket_médio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_ticket_médio"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_entity__medida_total_pedidos": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "entity__medida.total_pedidos": {
+			          "Target": {
+			            "Entity": "entity__medida.total_pedidos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.total_pedidos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_total_pedidos"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_entity__medida_valor_total": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "entity__medida.valor_total": {
+			          "Target": {
+			            "Entity": "entity__medida.valor_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.valor_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_valor_total"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_entity__medida_valor_frete": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "entity__medida.valor_frete": {
+			          "Target": {
+			            "Entity": "entity__medida.valor_frete"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.valor_frete"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_valor_frete"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_entity__medida_faturamento_produtos": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "entity__medida.faturamento_produtos": {
+			          "Target": {
+			            "Entity": "entity__medida.faturamento_produtos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.faturamento_produtos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_faturamento_produtos"
+			        }
+			      ]
+			    },
+			    "dim_data_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.trimestre": {
+			          "Target": {
+			            "Entity": "dim_data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_data_has_ano_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.ano_me": {
+			          "Target": {
+			            "Entity": "dim_data.ano_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.ano_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_ano_me"
+			        }
+			      ]
+			    },
+			    "dim_data_has_mes_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.mes_nome": {
+			          "Target": {
+			            "Entity": "dim_data.mes_nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.mes_nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_mes_nome"
+			        }
+			      ]
+			    },
+			    "dim_data_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.mes_numero": {
+			          "Target": {
+			            "Entity": "dim_data.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_mes_numeros"
+			        }
+			      ]
+			    },
+			    "dim_data_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.ano": {
+			          "Target": {
+			            "Entity": "dim_data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_data_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        },
+			        "dim_data.date": {
+			          "Target": {
+			            "Entity": "dim_data.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "dim_data.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_data_compra": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_fato_venda.data_compra": {
+			          "Target": {
+			            "Entity": "bi_fato_venda.data_compra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda.data_compra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_data_compras"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_freight_value": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_fato_venda.freight_value": {
+			          "Target": {
+			            "Entity": "bi_fato_venda.freight_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda.freight_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_freight_values"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_price": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_fato_venda.price": {
+			          "Target": {
+			            "Entity": "bi_fato_venda.price"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda.price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_prices"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "bi_fato_venda.price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "price_indicates_how_expensive_bi_fato_vendas_are"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_order_purchase_timestamp": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_fato_venda.order_purchase_timestamp": {
+			          "Target": {
+			            "Entity": "bi_fato_venda.order_purchase_timestamp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda.order_purchase_timestamp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_order_purchase_timestamps"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_order_item_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_fato_venda.order_item_id": {
+			          "Target": {
+			            "Entity": "bi_fato_venda.order_item_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda.order_item_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_order_item_ids"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_order_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_fato_venda.order_id": {
+			          "Target": {
+			            "Entity": "bi_fato_venda.order_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda.order_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_order_ids"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_data_compra": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.data_compra": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.data_compra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.data_compra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_data_compras"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_estimated_delivery_date": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_estimated_delivery_date": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_estimated_delivery_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_estimated_delivery_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_estimated_delivery_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_delivered_customer_date": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_delivered_customer_date": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_delivered_customer_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_delivered_customer_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_delivered_customer_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_delivered_carrier_date": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_delivered_carrier_date": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_delivered_carrier_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_delivered_carrier_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_delivered_carrier_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_approved_at": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_approved_at": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_approved_at"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_approved_at"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_approved_at"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_purchase_timestamp": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_purchase_timestamp": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_purchase_timestamp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_purchase_timestamp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_purchase_timestamps"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_status": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_status": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_statuses"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_has_order_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_id": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_pedido"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_pedido.order_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_pedidos_have_order_ids"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_has_seller_state": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_state": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_have_seller_states"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_has_seller_city": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_city": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_have_seller_cities"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_has_seller_zip_code_prefix": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_zip_code_prefix": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_zip_code_prefix"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_zip_code_prefix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_have_seller_zip_code_prefixes"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_has_seller_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_id": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_have_seller_ids"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor.seller_id"
+			            },
+			            "Verbs": [
+			              {
+			                "sell": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "seller_ids_sell_bi_dim_vendedors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor.seller_id"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "seller_ids_have_bi_dim_vendedors"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_width_cm": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_width_cm": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_width_cm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_width_cm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_width_cm"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_height_cm": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_height_cm": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_height_cm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_height_cm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_height_cm"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_length_cm": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_length_cm": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_length_cm"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_length_cm"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_length_cm"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_weight_g": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_weight_g": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_weight_g"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_weight_g"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_weight_g"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_photos_qty": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_photos_qty": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_photos_qty"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_photos_qty"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_photos_qties"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_description_lenght": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_description_lenght": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_description_lenght"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_description_lenght"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_description_lenghts"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_name_lenght": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_name_lenght": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_name_lenght"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_name_lenght"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_name_lenghts"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_category_name_english": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_category_name_english": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_category_name_english"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_category_name_english"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_category_name_englishes"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_category_name": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_category_name": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_category_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_category_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_category_names"
+			        }
+			      ]
+			    },
+			    "bi_dim_produto_has_product_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          }
+			        },
+			        "bi_dim_produto.product_id": {
+			          "Target": {
+			            "Entity": "bi_dim_produto.product_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto.product_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_product_ids"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_has_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_state": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_customer_states"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_has_customer_city": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_city": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_customer_cities"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_has_customer_zip_code_prefix": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_zip_code_prefix": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_zip_code_prefix"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_zip_code_prefix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_customer_zip_code_prefixes"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_has_customer_unique_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_unique_id": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_unique_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_unique_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_customer_unique_ids"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_has_customer_id": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_id": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_have_customer_ids"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_in_seller_state": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_state": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "bi_dim_vendedor.seller_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_are_in_seller_states"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_in_seller_city": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_city": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "bi_dim_vendedor.seller_city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_are_in_seller_cities"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_in_seller_zip_code_prefix": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_vendedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          }
+			        },
+			        "bi_dim_vendedor.seller_zip_code_prefix": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor.seller_zip_code_prefix"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "bi_dim_vendedor.seller_zip_code_prefix"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_vendedor.seller_zip_code_prefix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_are_in_seller_zip_code_prefixes"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_in_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_state": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "bi_dim_cliente.customer_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_are_in_customer_states"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_in_customer_city": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_city": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "bi_dim_cliente.customer_city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_are_in_customer_cities"
+			        }
+			      ]
+			    },
+			    "bi_dim_cliente_in_customer_zip_code_prefix": {
+			      "Binding": {
+			        "ConceptualEntity": "bi dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_cliente": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente"
+			          }
+			        },
+			        "bi_dim_cliente.customer_zip_code_prefix": {
+			          "Target": {
+			            "Entity": "bi_dim_cliente.customer_zip_code_prefix"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "bi_dim_cliente.customer_zip_code_prefix"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "bi_dim_cliente"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_dim_cliente.customer_zip_code_prefix"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_clientes_are_in_customer_zip_code_prefixes"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_is_estimated_on_order_estimated_delivery_date": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_estimated_delivery_date": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_estimated_delivery_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "bi_fato_pedido.order_estimated_delivery_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "estimate": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_fato_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "bi_fato_pedidos_are_estimated_on_order_estimated_delivery_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_is_delivered_on_order_delivered_customer_date": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_delivered_customer_date": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_delivered_customer_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "bi_fato_pedido.order_delivered_customer_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "deliver": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_fato_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "bi_fato_pedidos_are_delivered_on_order_delivered_customer_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_is_delivered_on_order_delivered_carrier_date": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_delivered_carrier_date": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_delivered_carrier_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "bi_fato_pedido.order_delivered_carrier_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "deliver": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_fato_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "bi_fato_pedidos_are_delivered_on_order_delivered_carrier_dates"
+			        }
+			      ]
+			    },
+			    "bi_fato_pedido_is_approved_on_order_approved_at": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_pedidos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_pedido": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido"
+			          }
+			        },
+			        "bi_fato_pedido.order_approved_at": {
+			          "Target": {
+			            "Entity": "bi_fato_pedido.order_approved_at"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "bi_fato_pedido.order_approved_at"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "approve": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_fato_pedido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "bi_fato_pedidos_are_approved_on_order_approved_at"
+			        }
+			      ]
+			    },
+			    "bi_dim_vendedor_sell_bi_fato_venda": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_dim_vendedor": {
+			          "Target": {
+			            "Entity": "bi_dim_vendedor"
+			          },
+			          "Nouns": [
+			            {
+			              "seller": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        },
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Verbs": [
+			              {
+			                "sell": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "bi_fato_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "bi_dim_vendedors_sell_bi_fato_vendas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_vendedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_bi_dim_vendedors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_vendedor"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_vendedors_have_bi_fato_vendas"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_bi_dim_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "bi_dim_produto": {
+			          "Target": {
+			            "Entity": "bi_dim_produto"
+			          },
+			          "Nouns": [
+			            {
+			              "product": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "bi_dim_produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_bi_dim_produtos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_dim_produto"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_dim_produtos_have_bi_fato_vendas"
+			        }
+			      ]
+			    },
+			    "bi_fato_venda_has_dim_data": {
+			      "Binding": {
+			        "ConceptualEntity": "bi fato_vendas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bi_fato_venda": {
+			          "Target": {
+			            "Entity": "bi_fato_venda"
+			          }
+			        },
+			        "dim_data": {
+			          "Target": {
+			            "Entity": "dim_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bi_fato_venda"
+			            },
+			            "Object": {
+			              "Role": "dim_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bi_fato_vendas_have_dim_data"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_data"
+			            },
+			            "Object": {
+			              "Role": "bi_fato_venda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_data_have_bi_fato_vendas"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

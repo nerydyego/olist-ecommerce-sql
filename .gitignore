@@ -72,3 +72,7 @@ estrutura.txt
 **/.pbi/cache.abf
 # Configurações locais do Power BI
 **/.pbi/
+
+# Imagens e arquivos binários
+*.png
+*.jpg

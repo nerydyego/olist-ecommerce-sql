@@ -1,8 +1,84 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "549c2704d413743ea83d",
-  "displayName": "Página 1",
+  "displayName": "Financeiro",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920
+  "width": 1920,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Layout de painel azul com gradientes.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "Layout_de_painel_azul_com_grad9702012758631794.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fill'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "''"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "Literal": {
+                    "Value": "''"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "cc79f2c177d102e60e9b",
+      "target": "b5331993b5233b28a010",
+      "type": "DataFilter"
+    },
+    {
+      "source": "cc79f2c177d102e60e9b",
+      "target": "489ec247238bd4185589",
+      "type": "DataFilter"
+    },
+    {
+      "source": "cc79f2c177d102e60e9b",
+      "target": "92f237a21ab8908ba04e",
+      "type": "DataFilter"
+    }
+  ]
 }

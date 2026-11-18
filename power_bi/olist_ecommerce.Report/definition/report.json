@@ -50,6 +50,17 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Layout_de_painel_azul_com_grad9702012758631794.png",
+          "path": "Layout_de_painel_azul_com_grad9702012758631794.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

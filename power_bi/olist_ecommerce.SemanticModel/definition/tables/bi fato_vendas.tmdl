@@ -1,13 +1,6 @@
 table 'bi fato_vendas'
 	lineageTag: fe57ed6b-4ab2-4d65-818c-f3a7d0611c7e
 
-	measure Faturamento_Produtos = SUM('bi fato_vendas'[price])
-		lineageTag: 4bd1de44-3b19-4cf5-98d0-22c38b168443
-
-		changedProperty = IsHidden
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column order_id
 		dataType: string
 		lineageTag: 3d302c85-a59c-471d-9732-f7d865c19a11

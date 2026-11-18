@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["bi dim_cliente","bi dim_produto","bi dim_vendedor","bi fato_pedidos","bi fato_vendas"]
+annotation PBI_QueryOrder = ["bi dim_cliente","bi dim_produto","bi dim_vendedor","bi fato_pedidos","bi fato_vendas","_medidas"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
@@ -19,6 +19,7 @@ ref table 'bi dim_vendedor'
 ref table 'bi fato_pedidos'
 ref table 'bi fato_vendas'
 ref table Dim_Data
+ref table _medidas
 
 ref cultureInfo pt-BR
 

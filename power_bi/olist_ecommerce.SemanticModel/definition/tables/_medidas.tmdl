@@ -1,0 +1,70 @@
+table _medidas
+	lineageTag: 6ba3d267-946e-482f-a615-638fe3eb1158
+
+	measure Faturamento_Produtos = SUM('bi fato_vendas'[price])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 4bd1de44-3b19-4cf5-98d0-22c38b168443
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Valor_frete = sum('bi fato_vendas'[freight_value])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 2f8c9771-394e-4b89-8e4d-2c1c69437820
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Valor_total = [Faturamento_Produtos]+[Valor_frete]
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 5f748533-83fe-4a15-ba6f-1b2117e2a6ff
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Total_pedidos = ```
+			DISTINCTCOUNT('bi fato_vendas'[order_id]) 
+			```
+		formatString: #,0
+		lineageTag: 8f481bd1-37d1-41ca-8a21-8a87051e6b01
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure Ticket_Médio = DIVIDE([Valor_total],[Total_pedidos])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 7bc658a8-f40c-4b2b-abbd-9ce23c1ddb89
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Total_Pedidos_geral = COUNTROWS('bi fato_pedidos')
+		lineageTag: bacbd8b0-7a19-43a8-8b2a-8ea6963f1e2d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Pedidos_entregues = CALCULATE(COUNTROWS('bi fato_pedidos'), 'bi fato_pedidos'[order_status] = "delivered")
+		formatString: #,0
+		lineageTag: 23795580-bde1-4caf-8d6d-04eaa98d1203
+
+	measure Pedido_em_transporte = CALCULATE(COUNTROWS('bi fato_pedidos'), 'bi fato_pedidos'[order_status] = "shipped")
+		formatString: #,0
+		lineageTag: 25097ca9-eacb-4a4f-a937-112d6bf830dd
+
+	measure Pedidos_cancelado = CALCULATE(COUNTROWS('bi fato_pedidos'), 'bi fato_pedidos'[order_status] = "canceled")
+		formatString: 0
+		lineageTag: 35e23302-ecf0-433a-ae0f-bdaf1fcfed35
+
+	measure Taxa_entrega = DIVIDE([Pedidos_entregues],[Total_Pedidos_geral])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7b683109-2a66-4930-935c-39142b774048
+
+	partition _medidas = m
+		mode: import
+		source =
+				let
+				  Origem = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [auxiliar = _t]),
+				  #"Tipo de coluna alterado" = Table.TransformColumnTypes(Origem, {{"auxiliar", Int64.Type}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo de coluna alterado",{"auxiliar"})
+				in
+				  #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+
